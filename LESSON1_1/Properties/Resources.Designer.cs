@@ -73,6 +73,16 @@ namespace LESSON1_1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _360_F_302529420_N3ptzETZvq7fxYjYcDMsQuUvSASzUh6h {
+            get {
+                object obj = ResourceManager.GetObject("360_F_302529420_N3ptzETZvq7fxYjYcDMsQuUvSASzUh6h", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ashville_Hot_Chicken__fried_chicken_with_a_fiery_cayenne_based_paste_ {
             get {
                 object obj = ResourceManager.GetObject("ashville Hot Chicken (fried chicken with a fiery cayenne-based paste)", resourceCulture);
@@ -125,9 +135,69 @@ namespace LESSON1_1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Bundle_A {
+            get {
+                object obj = ResourceManager.GetObject("Bundle A", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Bundle_B {
+            get {
+                object obj = ResourceManager.GetObject("Bundle B", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Caprese_Chicken_Gnocchi_Skillet {
+            get {
+                object obj = ResourceManager.GetObject("Caprese Chicken Gnocchi Skillet", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Carmalized_Onions_and_Blue_Cheese_beef {
             get {
                 object obj = ResourceManager.GetObject("Carmalized Onions and Blue Cheese beef", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Chicken___Rice_Casserole {
+            get {
+                object obj = ResourceManager.GetObject("Chicken & Rice Casserole", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Chicken_Enchiladas {
+            get {
+                object obj = ResourceManager.GetObject("Chicken Enchiladas", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Chicken_Logo {
+            get {
+                object obj = ResourceManager.GetObject("Chicken Logo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -155,6 +225,26 @@ namespace LESSON1_1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Hawaiian_Shoyu_Chicken {
+            get {
+                object obj = ResourceManager.GetObject("Hawaiian Shoyu Chicken", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap images {
+            get {
+                object obj = ResourceManager.GetObject("images", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Indian_Chicken_65__deep_fried_pieces_with_distinct_regional_spices_ {
             get {
                 object obj = ResourceManager.GetObject("Indian Chicken 65 (deep-fried pieces with distinct regional spices)", resourceCulture);
@@ -168,6 +258,16 @@ namespace LESSON1_1.Properties {
         internal static System.Drawing.Bitmap Korean_Fried_Chicken {
             get {
                 object obj = ResourceManager.GetObject("Korean Fried Chicken", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Orange_Chicken {
+            get {
+                object obj = ResourceManager.GetObject("Orange Chicken", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
