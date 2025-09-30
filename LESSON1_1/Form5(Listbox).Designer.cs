@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.listBox2 = new System.Windows.Forms.ListBox();
+            this.printDisplaylistBox = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // label1
@@ -42,24 +42,25 @@
             this.label1.TabIndex = 18;
             this.label1.Text = "Chicken, Pork, and Beef Restaurant!";
             // 
-            // listBox2
+            // printDisplaylistBox
             // 
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.ItemHeight = 16;
-            this.listBox2.Location = new System.Drawing.Point(34, 82);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(743, 548);
-            this.listBox2.TabIndex = 19;
+            this.printDisplaylistBox.FormattingEnabled = true;
+            this.printDisplaylistBox.ItemHeight = 16;
+            this.printDisplaylistBox.Location = new System.Drawing.Point(34, 82);
+            this.printDisplaylistBox.Name = "printDisplaylistBox";
+            this.printDisplaylistBox.Size = new System.Drawing.Size(743, 548);
+            this.printDisplaylistBox.TabIndex = 19;
             // 
             // Form5_Listbox_
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 647);
-            this.Controls.Add(this.listBox2);
+            this.Controls.Add(this.printDisplaylistBox);
             this.Controls.Add(this.label1);
             this.Name = "Form5_Listbox_";
             this.Text = "Form5_Listbox_";
+            this.Load += new System.EventHandler(this.Form5_Listbox__Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -68,6 +69,6 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ListBox listBox2;
+        public System.Windows.Forms.ListBox printDisplaylistBox;
     }
 }

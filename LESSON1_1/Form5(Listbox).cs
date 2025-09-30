@@ -15,7 +15,12 @@ namespace LESSON1_1
         public Form5_Listbox_()
         {
             InitializeComponent();
-            listBox2.Items.AddRange(listBox2.Items);
+            printDisplaylistBox.Items.AddRange(printDisplaylistBox.Items);
+        }
+
+        private void Form5_Listbox__Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

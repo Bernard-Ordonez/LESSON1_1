@@ -46,17 +46,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminPage.Designer.cs">
+      <DependentUpon>AdminPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
     <Compile Include="Form2_1.cs">
       <SubType>Form</SubType>
@@ -88,13 +88,37 @@
     <Compile Include="Form5.Designer.cs">
       <DependentUpon>Form5.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form6%28Payslip%29.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form6%28Payslip%29.Designer.cs">
+      <DependentUpon>Form6%28Payslip%29.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form6.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form6.Designer.cs">
+      <DependentUpon>Form6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOGIN_MBI_.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOGIN_MBI_.Designer.cs">
+      <DependentUpon>LOGIN_MBI_.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrelimExam%28Form5%29.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrelimExam%28Form5%29.Designer.cs">
+      <DependentUpon>PrelimExam%28Form5%29.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AdminPage.resx">
+      <DependentUpon>AdminPage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form2.resx">
-      <DependentUpon>Form2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form2_1.resx">
       <DependentUpon>Form2_1.cs</DependentUpon>
@@ -110,6 +134,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form5.resx">
       <DependentUpon>Form5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form6%28Payslip%29.resx">
+      <DependentUpon>Form6%28Payslip%29.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form6.resx">
+      <DependentUpon>Form6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOGIN_MBI_.resx">
+      <DependentUpon>LOGIN_MBI_.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrelimExam%28Form5%29.resx">
+      <DependentUpon>PrelimExam%28Form5%29.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -214,6 +250,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Chicken Logo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User Face.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

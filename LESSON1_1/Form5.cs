@@ -67,14 +67,24 @@ namespace LESSON1_1
                 // Change background
                 this.BackColor = Color.LightCyan;
 
+                checkBox11.Checked = true;
+                checkBox12.Checked = true;
+                checkBox13.Checked = true;
+                checkBox14.Checked = true; 
+                checkBox15.Checked = true;
+
+                checkBox1.Checked = false;
+                checkBox2.Checked = false;
+                checkBox3.Checked = false;
+                checkBox4.Checked = false;
+                checkBox5.Checked = false;
+
                 pictureBox22.Image = Image.FromFile(@"C:\Users\Bernard Ordonez\source\DSAL01E\LESSON1_1\LESSON1_1\Resources\Bundle A.jpg");
                 pictureBox22.SizeMode = PictureBoxSizeMode.StretchImage;
 
                 textBox1.Enabled = false;      // Price
-                textBox2.Enabled = false;      // Quantity
                 richTextBox2.Enabled = false;  // Discounted Amount
                 richTextBox1.Enabled = false;  // Discount Amount
-                richTextBox5.Enabled = false;  // Cash Given
 
                 textBox1.Text = price.ToString("N2");         // Price textbox
                 richTextBox1.Text = discount.ToString("N2");  // Discount Amount
@@ -99,16 +109,28 @@ namespace LESSON1_1
                 // Change background
                 this.BackColor = Color.LightBlue;
 
+                checkBox1.Checked = true;
+                checkBox2.Checked = true;
+                checkBox3.Checked = true;
+                checkBox4.Checked = true;
+                checkBox5.Checked = true;
+
+                checkBox11.Checked = false;
+                checkBox12.Checked = false;
+                checkBox13.Checked = false;
+                checkBox14.Checked = false;
+                checkBox15.Checked = false;
+
+
+
                 // Show bundle image (replace with actual path)
                 pictureBox22.Image = Image.FromFile(@"C:\Users\Bernard Ordonez\source\DSAL01E\LESSON1_1\LESSON1_1\Resources\Bundle B.jpg");
                 pictureBox22.SizeMode = PictureBoxSizeMode.StretchImage;
 
                 // Disable textboxes 1–5
                 textBox1.Enabled = false;      // Price
-                textBox2.Enabled = false;      // Quantity
                 richTextBox2.Enabled = false;  // Discounted Amount
                 richTextBox1.Enabled = false;  // Discount Amount
-                richTextBox5.Enabled = false;  // Cash Given
 
                 // Fill values
                 textBox1.Text = price.ToString("N2");        // Price textbox
@@ -147,29 +169,28 @@ namespace LESSON1_1
         private void button2_Click(object sender, EventArgs e)
         {
             Form5_Listbox_ print = new Form5_Listbox_();
-            print.listBox2.items.AddRange(this.listBox1.Items);
+            print.printDisplaylistBox.Items.AddRange(this.listBox1.Items);
             print.Show();
         }
         private void button3_Click(object sender, EventArgs e)
         {
-            listBox1.Items.RemoveAt(listBox1.SelectedIndex);
+            listBox1.Items.Clear();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            // 1. Uncheck both food bundles
+
             radioButton1.Checked = false;
             radioButton2.Checked = false;
 
-            // 2. Enable both bundles again
+
             radioButton1.Enabled = true;
             radioButton2.Enabled = true;
 
-            // 3. Reset PB22 to default image
             pictureBox22.Image = Image.FromFile(@"C:\Users\Bernard Ordonez\source\DSAL01E\LESSON1_1\LESSON1_1\Resources\images.jpg");
             pictureBox22.SizeMode = PictureBoxSizeMode.StretchImage;
 
-            // 4. Uncheck individual food checkboxes manually (1–30)
+
             checkBox1.Checked = false;
             checkBox2.Checked = false;
             checkBox3.Checked = false;
@@ -201,7 +222,7 @@ namespace LESSON1_1
             checkBox29.Checked = false;
             checkBox30.Checked = false;
 
-            // 5. Reset textboxes/richTextboxes
+          
             textBox1.Text = "";
             textBox2.Text = "0";
             richTextBox1.Text = "";
@@ -211,10 +232,9 @@ namespace LESSON1_1
             richTextBox5.Text = "";
             richTextBox6.Text = "";
 
-            // 6. Clear listbox
+            
             listBox1.Items.Clear();
 
-            // 7. Reset form background
             this.BackColor = SystemColors.Control;
         }
 
@@ -462,6 +482,57 @@ namespace LESSON1_1
             listBox1.Items.Add(checkBox30.Text + " " + textBox1.Text);
             textBox2.Text = "0";
             textBox2.Focus();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            bool bundleASelected = radioButton1.Checked;
+            bool bundleBSelected = radioButton2.Checked;
+            
+            bool bundleA1Selected = checkBox11.Checked;
+            bool bundleA2Selected = checkBox12.Checked;
+            bool bundleA3Selected = checkBox13.Checked;
+            bool bundleA4Selected = checkBox14.Checked;
+            bool bundleA5Selected = checkBox15.Checked;
+
+            bool bundleB1Selected = checkBox1.Checked;
+            bool bundleB2Selected = checkBox2.Checked;
+            bool bundleB3Selected = checkBox3.Checked;
+            bool bundleB4Selected = checkBox4.Checked;
+            bool bundleB5Selected = checkBox5.Checked;
+
+
+
+            PrelimExam_Form5_ summaryForm = new PrelimExam_Form5_(
+                textBox1.Text,       // Price
+                textBox2.Text,       // Quantity
+                richTextBox1.Text,   // Discount Amount
+                richTextBox2.Text,   // Discounted Amount
+                richTextBox3.Text,   // Total Bills
+                richTextBox4.Text,   // Total Quantity
+                richTextBox5.Text,   // Cash Given
+                richTextBox6.Text,   // Change
+                bundleASelected,
+                bundleBSelected,
+                bundleA1Selected,
+                bundleA2Selected,
+                bundleA3Selected,
+                bundleA4Selected,
+                bundleA5Selected,
+                bundleB1Selected,
+                bundleB2Selected,
+                bundleB3Selected,
+                bundleB4Selected,
+                bundleB5Selected
+
+            );
+
+            summaryForm.Show();
         }
     }
 }

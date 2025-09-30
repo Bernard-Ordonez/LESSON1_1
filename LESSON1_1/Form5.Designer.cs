@@ -114,6 +114,7 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.pictureBox22 = new System.Windows.Forms.PictureBox();
+            this.button6 = new System.Windows.Forms.Button();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -1060,6 +1061,7 @@
             this.button5.TabIndex = 122;
             this.button5.Text = "EXIT";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // pictureBox22
             // 
@@ -1069,12 +1071,23 @@
             this.pictureBox22.TabIndex = 123;
             this.pictureBox22.TabStop = false;
             // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(173, 950);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(144, 56);
+            this.button6.TabIndex = 124;
+            this.button6.Text = "TRANSFER";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
             // Form5
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::LESSON1_1.Properties.Resources.images;
             this.ClientSize = new System.Drawing.Size(1924, 1055);
+            this.Controls.Add(this.button6);
             this.Controls.Add(this.pictureBox22);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
@@ -1220,5 +1233,6 @@
         private System.Windows.Forms.CheckBox checkBox29;
         private System.Windows.Forms.CheckBox checkBox28;
         private System.Windows.Forms.PictureBox pictureBox22;
+        private System.Windows.Forms.Button button6;
     }
 }

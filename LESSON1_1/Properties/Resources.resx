@@ -118,85 +118,88 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Bundle B" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Bundle B.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="360_F_302529420_N3ptzETZvq7fxYjYcDMsQuUvSASzUh6h" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\360_F_302529420_N3ptzETZvq7fxYjYcDMsQuUvSASzUh6h.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Bacon-Wrapped Pork Chop" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Bacon-Wrapped Pork Chop.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Breaded Pork Chop" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Breaded Pork Chop.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Korean Fried Chicken" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Korean Fried Chicken.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Taiwanese-Popcorn-Chicken" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Taiwanese-Popcorn-Chicken.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Indian Chicken 65 (deep-fried pieces with distinct regional spices)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Indian Chicken 65 (deep-fried pieces with distinct regional spices).JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ashville Hot Chicken (fried chicken with a fiery cayenne-based paste)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ashville Hot Chicken (fried chicken with a fiery cayenne-based paste).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Caprese Chicken Gnocchi Skillet" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Caprese Chicken Gnocchi Skillet.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Chicken &amp; Rice Casserole" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Chicken &amp; Rice Casserole.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="360_F_292203735_CSsyqyS6A4Z9Czd4Msf7qZEhoxjpzZl1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\360_F_292203735_CSsyqyS6A4Z9Czd4Msf7qZEhoxjpzZl1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Chili-Honey Glazed Lechon Kawali" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Chili-Honey Glazed Lechon Kawali.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Southern Fried Chicken" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Southern Fried Chicken.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Hawaiian Shoyu Chicken" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Hawaiian Shoyu Chicken.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Pork Tonkatsu" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Pork Tonkatsu.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Beef Wellington" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Beef Wellington.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Fried Calamansi Pork Chops" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Fried Calamansi Pork Chops.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Prime Rib Roast" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Prime Rib Roast.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="The Filet Mignon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\The Filet Mignon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Orange Chicken" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Orange Chicken.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Steak Au Poivre" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Steak Au Poivre.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="background-junk-food-related-seamless-pattern-and-background-editable-stroke-fast-food-line-art-of-hamburger-pizza-hot-dog-beverage-cheeseburger-restaurant-menu-background-free-vector" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\background-junk-food-related-seamless-pattern-and-background-editable-stroke-fast-food-line-art-of-hamburger-pizza-hot-dog-beverage-cheeseburger-restaurant-menu-background-free-vector.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Hawaiian Shoyu Chicken" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Hawaiian Shoyu Chicken.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Prime Rib Roast" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Prime Rib Roast.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Beef Wellington" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Beef Wellington.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Chicken Enchiladas" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Chicken Enchiladas.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Bundle A" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Bundle A.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Chili-Honey Glazed Lechon Kawali" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Chili-Honey Glazed Lechon Kawali.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="360_F_292203735_CSsyqyS6A4Z9Czd4Msf7qZEhoxjpzZl1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\360_F_292203735_CSsyqyS6A4Z9Czd4Msf7qZEhoxjpzZl1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="The Filet Mignon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\The Filet Mignon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Indian Chicken 65 (deep-fried pieces with distinct regional spices)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Indian Chicken 65 (deep-fried pieces with distinct regional spices).JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="360_F_302529420_N3ptzETZvq7fxYjYcDMsQuUvSASzUh6h" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\360_F_302529420_N3ptzETZvq7fxYjYcDMsQuUvSASzUh6h.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Bundle B" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Bundle B.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Breaded Pork Chop" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Breaded Pork Chop.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Fried Calamansi Pork Chops" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Fried Calamansi Pork Chops.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Caprese Chicken Gnocchi Skillet" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Caprese Chicken Gnocchi Skillet.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Chicken Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Chicken Logo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ashville Hot Chicken (fried chicken with a fiery cayenne-based paste)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ashville Hot Chicken (fried chicken with a fiery cayenne-based paste).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Southern Fried Chicken" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Southern Fried Chicken.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="images" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\images.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Taiwanese-Popcorn-Chicken" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Taiwanese-Popcorn-Chicken.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Steak Au Poivre" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Steak Au Poivre.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Orange Chicken" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Orange Chicken.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Korean Fried Chicken" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Korean Fried Chicken.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Chicken &amp; Rice Casserole" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Chicken &amp; Rice Casserole.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Carmalized Onions and Blue Cheese beef" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Carmalized Onions and Blue Cheese beef.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Chicken Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Chicken Logo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Pork Tonkatsu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Pork Tonkatsu.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Bundle A" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Bundle A.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="User Face" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\User Face.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
