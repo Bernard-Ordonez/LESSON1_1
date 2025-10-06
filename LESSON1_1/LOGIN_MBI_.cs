@@ -19,6 +19,7 @@ namespace LESSON1_1
         private void LOGIN_MBI__Load(object sender, EventArgs e)
         {
             richTextBox1.Focus();
+            this.WindowState = FormWindowState.Maximized;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -29,13 +30,13 @@ namespace LESSON1_1
                 Accounting, AccountingPass;
 
             Admin = "Admin";
-            AdminPass = "Admin";
+            AdminPass = "AdminPass";
 
             Cashier1 = "Cashier1";
-            Cashier1Pass = "Cashier1";
+            Cashier1Pass = "Cashier1Pass";
 
             Cashier2 = "Cashier2";
-            Cashier2Pass = "Cashier2";
+            Cashier2Pass = "Cashier2Pass";
 
             Accounting = "Accounting";
             AccountingPass = "AccountingPass";
@@ -57,7 +58,7 @@ namespace LESSON1_1
             }
             else if (richTextBox1.Text == Accounting && richTextBox2.Text == AccountingPass)
             {
-                Form5 newMDIChild = new Form5();
+                Form4 newMDIChild = new Form4();
                 newMDIChild.Show();
             }
             else

@@ -106,6 +106,12 @@
     <Compile Include="LOGIN_MBI_.Designer.cs">
       <DependentUpon>LOGIN_MBI_.cs</DependentUpon>
     </Compile>
+    <Compile Include="POS1__Function_%28F2_1%29.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="POS1__Function_%28F2_1%29.Designer.cs">
+      <DependentUpon>POS1__Function_%28F2_1%29.cs</DependentUpon>
+    </Compile>
     <Compile Include="PrelimExam%28Form5%29.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -143,6 +149,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LOGIN_MBI_.resx">
       <DependentUpon>LOGIN_MBI_.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="POS1__Function_%28F2_1%29.resx">
+      <DependentUpon>POS1__Function_%28F2_1%29.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PrelimExam%28Form5%29.resx">
       <DependentUpon>PrelimExam%28Form5%29.cs</DependentUpon>
@@ -253,6 +262,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\User Face.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yrkGs9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yrkGs91.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\donut-pixel-art-pattern-seamless-8-bit-food-sweetness-background-pixelated-vector-texture-2R0YTCW.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pixelated-burger-universe-stockcake.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\organic-food-background-hand-drawn-concept-free-vector.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pexels-photo-1435895.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\istockphoto-1182393436-612x612.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

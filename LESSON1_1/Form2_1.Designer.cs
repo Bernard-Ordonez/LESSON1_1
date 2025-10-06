@@ -1157,6 +1157,7 @@
             this.Controls.Add(this.label18);
             this.Name = "Form2_1";
             this.Text = "Form2_1";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form2_1_Load);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();

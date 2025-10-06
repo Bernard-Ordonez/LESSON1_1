@@ -16,7 +16,7 @@ namespace LESSON1_1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LOGIN_MBI_());
+            Application.Run(new Form5());
         }
     }
 }

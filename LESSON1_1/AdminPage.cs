@@ -24,6 +24,12 @@ namespace LESSON1_1
             newMDIChild.MdiParent = this;
             newMDIChild.Show();
         }
+        private void cashier2Form4ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form3 newMDIChild = new Form3();
+            newMDIChild.MdiParent = this;
+            newMDIChild.Show();
+        }
 
         private void form21Cashier2ToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -36,18 +42,24 @@ namespace LESSON1_1
         {
             this.Close();
         }
-         
+
         // POS Administrator
-        private void form1Cashier1ToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void simplePOSToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form1 newMDIChild = new Form1();
+            newMDIChild.MdiParent = this;
+            newMDIChild.Show();
+        }
+        private void form1Cashier1ToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Form2_1 newMDIChild = new Form2_1();
             newMDIChild.MdiParent = this;
             newMDIChild.Show();
         }
 
         private void form21Cashier2ToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            Form2_1 newMDIChild = new Form2_1();
+            Form3 newMDIChild = new Form3();
             newMDIChild.MdiParent = this;
             newMDIChild.Show();
         }
@@ -90,12 +102,55 @@ namespace LESSON1_1
             newMDIChild.MdiParent = this;
             newMDIChild.Show();
         }
-
+        
+        // Accounting
         private void studentRegistrationPageToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form4 newMDIChild = new Form4();
             newMDIChild.MdiParent = this;
             newMDIChild.Show();
+        }
+
+        // Prelim
+        private void prelimExamToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            PrelimExam_Form5_ newMDIChild = new PrelimExam_Form5_();
+            newMDIChild.MdiParent = this;
+            newMDIChild.Show();
+        }
+
+        private void bundlePromoFormToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form3 newMDIChild = new Form3();
+            newMDIChild.MdiParent = this;
+            newMDIChild.Show();
+        }
+
+        private void bundlePromo2Form5ToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Form5 newMDIChild = new Form5();
+            newMDIChild.MdiParent = this;
+            newMDIChild.Show();
+        }
+
+        private void payrolApplicationToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Form5 newMDIChild = new Form5();
+            newMDIChild.MdiParent = this;
+            newMDIChild.Show();
+        }
+
+        private void studentRegistrationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form4 newMDIChild = new Form4();
+            newMDIChild.MdiParent = this;
+            newMDIChild.Show();
+        }
+
+        private void AdminPage_Load(object sender, EventArgs e)
+        {
+            MessageBox.Show("Welcome to AdminPage", "Greeting", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.WindowState = FormWindowState.Maximized;
         }
     }
 }

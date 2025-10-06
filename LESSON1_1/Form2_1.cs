@@ -16,6 +16,7 @@ namespace LESSON1_1
         public Form2_1()
         {
             InitializeComponent();
+            textBox2.Focus();
         }
 
         private int totalQuantity = 0;
@@ -36,7 +37,7 @@ namespace LESSON1_1
             pictureBox19.Image = Image.FromFile("C:\\Users\\Bernard Ordonez\\source\\DSAL01E\\LESSON1_1\\LESSON1_1\\Resources\\Chicken Enchiladas.jpg");
             pictureBox20.Image = Image.FromFile("C:\\Users\\Bernard Ordonez\\source\\DSAL01E\\LESSON1_1\\LESSON1_1\\Resources\\Caprese Chicken Gnocchi Skillet.jpg");
 
-            textBox1.ReadOnly = true;   // Name
+            textBox1.ReadOnly = true;   // Item Name
             textBox2.ReadOnly = false;  // Quantity (editable)
             textBox3.ReadOnly = true;   // Price
             textBox4.ReadOnly = true;   // Discount
@@ -48,6 +49,7 @@ namespace LESSON1_1
             textBox14.ReadOnly = true;  // Change 
 
             radioButton4.Checked = true; // Default to "None (0%)"
+            textBox2.Focus();
         }
 
         // Discount Calculation 
@@ -68,22 +70,26 @@ namespace LESSON1_1
             textBox4.Text = discountAmount.ToString("F2");     // Discount Amount
             textBox5.Text = discountedAmount.ToString("F2");   // Discounted Amount
         }
+
+        // Buttons
         private void buttonNew_Click(object sender, EventArgs e)
         {
             ClearCurrentOrder();
+            textBox2.ReadOnly = false;
         }
+
         private void buttonCancel_Click(object sender, EventArgs e)
         {
             ClearCurrentOrder();
         }
+
         private void buttonExit_Click(object sender, EventArgs e)
         {
             this.Close(); // Close
         }
 
-
-        //  Discount Radio Buttons 
-        private void radioButton1_CheckedChanged(object sender, EventArgs e) // None (0%)
+        // Discount Radio Buttons 
+        private void radioButton1_CheckedChanged(object sender, EventArgs e) // 20%
         {
             if (radioButton1.Checked)
             {
@@ -92,7 +98,7 @@ namespace LESSON1_1
             }
         }
 
-        private void radioButton2_CheckedChanged(object sender, EventArgs e) // 10%
+        private void radioButton2_CheckedChanged(object sender, EventArgs e) // 15%
         {
             if (radioButton2.Checked)
             {
@@ -101,7 +107,7 @@ namespace LESSON1_1
             }
         }
 
-        private void radioButton3_CheckedChanged(object sender, EventArgs e) // 20%
+        private void radioButton3_CheckedChanged(object sender, EventArgs e) // 10%
         {
             if (radioButton3.Checked)
             {
@@ -110,7 +116,7 @@ namespace LESSON1_1
             }
         }
 
-        private void radioButton4_CheckedChanged(object sender, EventArgs e) // 30%
+        private void radioButton4_CheckedChanged(object sender, EventArgs e) // 0%
         {
             if (radioButton4.Checked)
             {
@@ -119,39 +125,46 @@ namespace LESSON1_1
             }
         }
 
-
         // Calculate Button
         private void button17_Click(object sender, EventArgs e) // Calculate
         {
-            if (!decimal.TryParse(textBox5.Text, out decimal discountedAmount) || discountedAmount <= 0)
+            try
             {
-                MessageBox.Show("Please select an item, enter quantity, and apply discount first.");
-                return;
-            }
+                if (!decimal.TryParse(textBox5.Text, out decimal discountedAmount) || discountedAmount <= 0)
+                {
+                    MessageBox.Show("Please select an item, enter quantity, and apply discount first.");
+                    return;
+                }
 
-            if (!decimal.TryParse(textBox13.Text, out decimal cash))
+                if (!decimal.TryParse(textBox13.Text, out decimal cash))
+                {
+                    MessageBox.Show("Enter valid cash amount.");
+                    return;
+                }
+
+                decimal change = cash - discountedAmount;
+                if (change < 0)
+                {
+                    MessageBox.Show("Insufficient cash.");
+                    return;
+                }
+
+                textBox14.Text = change.ToString("F2");
+
+                // Update running totals
+                totalQuantity += currentQty;
+                totalDiscount += decimal.Parse(textBox4.Text);
+                totalDiscountedAmount += discountedAmount;
+
+                textBox10.Text = totalQuantity.ToString();               // Total Quantity
+                textBox11.Text = totalDiscount.ToString("F2");           // Total Discount
+                textBox12.Text = totalDiscountedAmount.ToString("F2");   // Total Discounted Amount
+                textBox2.ReadOnly = true;
+            }
+            catch (Exception ex)
             {
-                MessageBox.Show("Enter valid cash amount.");
-                return;
+                MessageBox.Show("Error during calculation: " + ex.Message);
             }
-
-            decimal change = cash - discountedAmount;
-            if (change < 0)
-            {
-                MessageBox.Show("Insufficient cash.");
-                return;
-            }
-
-            textBox14.Text = change.ToString("F2");
-
-            // Update running totals
-            totalQuantity += currentQty;
-            totalDiscount += decimal.Parse(textBox4.Text);
-            totalDiscountedAmount += discountedAmount;
-
-            textBox10.Text = totalQuantity.ToString();               // Total Quantity
-            textBox11.Text = totalDiscount.ToString("F2");           // Total Discount
-            textBox12.Text = totalDiscountedAmount.ToString("F2");   // Total Discounted Amount
         }
 
         // Clear Order 
@@ -167,165 +180,41 @@ namespace LESSON1_1
                                // KEEP totals in textBox10, textBox11, textBox12
         }
 
-        // Food Items
-        private void pictureBox1_Click(object sender, EventArgs e)
+        // Food Items (Strict numeric handling for price)
+        private void SetFoodItem(string itemName, decimal price)
         {
-            currentItem = "Nashville Hot Chicken";
-            currentPrice = 150;
-            textBox1.Text = currentItem;
-            textBox3.Text = currentPrice.ToString("F2");
+            try
+            {
+                currentItem = itemName;
+                currentPrice = price;
+                textBox1.Text = currentItem;
+                textBox3.Text = currentPrice.ToString("F2");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Invalid price value.");
+            }
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-            currentItem = "Indian Chicken 65";
-            currentPrice = 180;
-            textBox1.Text = currentItem;
-            textBox3.Text = currentPrice.ToString("F2");
-        }
-
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-            currentItem = "Taiwanese Popcorn Chicken";
-            currentPrice = 160;
-            textBox1.Text = currentItem;
-            textBox3.Text = currentPrice.ToString("F2");
-        }
-
-        private void pictureBox4_Click(object sender, EventArgs e)
-        {
-            currentItem = "Korean Fried Chicken";
-            currentPrice = 200;
-            textBox1.Text = currentItem;
-            textBox3.Text = currentPrice.ToString("F2");
-        }
-
-        private void pictureBox5_Click(object sender, EventArgs e)
-        {
-            currentItem = "Southern Fried Chicken";
-            currentPrice = 170;
-            textBox1.Text = currentItem;
-            textBox3.Text = currentPrice.ToString("F2");
-        }
-
-        private void pictureBox6_Click(object sender, EventArgs e)
-        {
-            currentItem = "Chili-Honey Glazed Lechon Kawali";
-            currentPrice = 220;
-            textBox1.Text = currentItem;
-            textBox3.Text = currentPrice.ToString("F2");
-        }
-
-        private void pictureBox7_Click(object sender, EventArgs e)
-        {
-            currentItem = "Bacon-Wrapped Pork Chop";
-            currentPrice = 190;
-            textBox1.Text = currentItem;
-            textBox3.Text = currentPrice.ToString("F2");
-        }
-
-        private void pictureBox8_Click(object sender, EventArgs e)
-        {
-            currentItem = "Pork Tonkatsu";
-            currentPrice = 180;
-            textBox1.Text = currentItem;
-            textBox3.Text = currentPrice.ToString("F2");
-        }
-
-        private void pictureBox9_Click(object sender, EventArgs e)
-        {
-            currentItem = "Fried Calamansi Pork Chops";
-            currentPrice = 175;
-            textBox1.Text = currentItem;
-            textBox3.Text = currentPrice.ToString("F2");
-        }
-
-        private void pictureBox10_Click(object sender, EventArgs e)
-        {
-            currentItem = "Breaded Pork Chop";
-            currentPrice = 160;
-            textBox1.Text = currentItem;
-            textBox3.Text = currentPrice.ToString("F2");
-        }
-
-        private void pictureBox11_Click(object sender, EventArgs e)
-        {
-            currentItem = "Caramelized Onions and Blue Cheese Beef";
-            currentPrice = 250;
-            textBox1.Text = currentItem;
-            textBox3.Text = currentPrice.ToString("F2");
-        }
-
-        private void pictureBox12_Click(object sender, EventArgs e)
-        {
-            currentItem = "Prime Rib Roast";
-            currentPrice = 300;
-            textBox1.Text = currentItem;
-            textBox3.Text = currentPrice.ToString("F2");
-        }
-
-        private void pictureBox13_Click(object sender, EventArgs e)
-        {
-            currentItem = "Beef Wellington";
-            currentPrice = 350;
-            textBox1.Text = currentItem;
-            textBox3.Text = currentPrice.ToString("F2");
-        }
-
-        private void pictureBox14_Click(object sender, EventArgs e)
-        {
-            currentItem = "The Filet Mignon";
-            currentPrice = 320;
-            textBox1.Text = currentItem;
-            textBox3.Text = currentPrice.ToString("F2");
-        }
-
-        private void pictureBox15_Click(object sender, EventArgs e)
-        {
-            currentItem = "Steak Au Poivre";
-            currentPrice = 280;
-            textBox1.Text = currentItem;
-            textBox3.Text = currentPrice.ToString("F2");
-        }
-
-        private void pictureBox16_Click(object sender, EventArgs e)
-        {
-            currentItem = "Hawaiian Shoyu Chicken";
-            currentPrice = 200;
-            textBox1.Text = currentItem;
-            textBox3.Text = currentPrice.ToString("F2");
-        }
-
-        private void pictureBox17_Click(object sender, EventArgs e)
-        {
-            currentItem = "Chicken & Rice Casserole";
-            currentPrice = 180;
-            textBox1.Text = currentItem;
-            textBox3.Text = currentPrice.ToString("F2");
-        }
-
-        private void pictureBox18_Click(object sender, EventArgs e)
-        {
-            currentItem = "Orange Chicken";
-            currentPrice = 190;
-            textBox1.Text = currentItem;
-            textBox3.Text = currentPrice.ToString("F2");
-        }
-
-        private void pictureBox19_Click(object sender, EventArgs e)
-        {
-            currentItem = "Chicken Enchiladas";
-            currentPrice = 210;
-            textBox1.Text = currentItem;
-            textBox3.Text = currentPrice.ToString("F2");
-        }
-
-        private void pictureBox20_Click(object sender, EventArgs e)
-        {
-            currentItem = "Caprese Chicken Gnocchi Skillet";
-            currentPrice = 230;
-            textBox1.Text = currentItem;
-            textBox3.Text = currentPrice.ToString("F2");
-        }
+        private void pictureBox1_Click(object sender, EventArgs e) { SetFoodItem("Nashville Hot Chicken", 150); }
+        private void pictureBox2_Click(object sender, EventArgs e) { SetFoodItem("Indian Chicken 65", 180); }
+        private void pictureBox3_Click(object sender, EventArgs e) { SetFoodItem("Taiwanese Popcorn Chicken", 160); }
+        private void pictureBox4_Click(object sender, EventArgs e) { SetFoodItem("Korean Fried Chicken", 200); }
+        private void pictureBox5_Click(object sender, EventArgs e) { SetFoodItem("Southern Fried Chicken", 170); }
+        private void pictureBox6_Click(object sender, EventArgs e) { SetFoodItem("Chili-Honey Glazed Lechon Kawali", 220); }
+        private void pictureBox7_Click(object sender, EventArgs e) { SetFoodItem("Bacon-Wrapped Pork Chop", 190); }
+        private void pictureBox8_Click(object sender, EventArgs e) { SetFoodItem("Pork Tonkatsu", 180); }
+        private void pictureBox9_Click(object sender, EventArgs e) { SetFoodItem("Fried Calamansi Pork Chops", 175); }
+        private void pictureBox10_Click(object sender, EventArgs e) { SetFoodItem("Breaded Pork Chop", 160); }
+        private void pictureBox11_Click(object sender, EventArgs e) { SetFoodItem("Caramelized Onions and Blue Cheese Beef", 250); }
+        private void pictureBox12_Click(object sender, EventArgs e) { SetFoodItem("Prime Rib Roast", 300); }
+        private void pictureBox13_Click(object sender, EventArgs e) { SetFoodItem("Beef Wellington", 350); }
+        private void pictureBox14_Click(object sender, EventArgs e) { SetFoodItem("The Filet Mignon", 320); }
+        private void pictureBox15_Click(object sender, EventArgs e) { SetFoodItem("Steak Au Poivre", 280); }
+        private void pictureBox16_Click(object sender, EventArgs e) { SetFoodItem("Hawaiian Shoyu Chicken", 200); }
+        private void pictureBox17_Click(object sender, EventArgs e) { SetFoodItem("Chicken & Rice Casserole", 180); }
+        private void pictureBox18_Click(object sender, EventArgs e) { SetFoodItem("Orange Chicken", 190); }
+        private void pictureBox19_Click(object sender, EventArgs e) { SetFoodItem("Chicken Enchiladas", 210); }
+        private void pictureBox20_Click(object sender, EventArgs e) { SetFoodItem("Caprese Chicken Gnocchi Skillet", 230); }
     }
 }

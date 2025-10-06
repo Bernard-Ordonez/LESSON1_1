@@ -16,9 +16,35 @@ namespace LESSON1_1
     {
         private double total_amount = 0;
         private int total_qty = 0;
+
+        // new helpers to prevent double-counting
+        private int currentItemLastQuantity = 0;
+        private double currentItemLastAmount = 0.0;
+        private bool updatingQuantity = false;
         public Form5()
         {
             InitializeComponent();
+        }
+
+        private void HandleCheckBoxClick(CheckBox chk, double price)
+        {
+            // Assign values
+            textBox1.Text = price.ToString("N2");  // Set price
+            richTextBox1.Text = "0.00";            // No discount
+
+            // Add to listbox
+            listBox1.Items.Add(chk.Text + " " + textBox1.Text);
+
+            // Prevent TextChanged from reacting to this programmatic change
+            updatingQuantity = true;
+            textBox2.Text = "0";
+            updatingQuantity = false;
+
+            // Reset tracking for this new current item
+            currentItemLastQuantity = 0;
+            currentItemLastAmount = 0.0;
+
+            textBox2.Focus();
         }
 
         private void Form5_Load(object sender, EventArgs e)
@@ -174,11 +200,26 @@ namespace LESSON1_1
         }
         private void button3_Click(object sender, EventArgs e)
         {
+            // Reset totals and current-item trackers
+            total_amount = 0;
+            total_qty = 0;
+            currentItemLastAmount = 0;
+            currentItemLastQuantity = 0;
+
+            richTextBox2.Text = "0.00";
+            richTextBox3.Text = "0.00";
+            richTextBox4.Text = "0";
             listBox1.Items.Clear();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
+            total_amount = 0;
+            total_qty = 0;
+            currentItemLastAmount = 0.0;
+            currentItemLastQuantity = 0;
+            richTextBox3.Text = "0.00";
+            richTextBox4.Text = "0";
 
             radioButton1.Checked = false;
             radioButton2.Checked = false;
@@ -240,248 +281,148 @@ namespace LESSON1_1
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-            // Declare variables
-            double price, discountedAmt, discountAmt;
-            int quantity;
+            // If we are setting text programmatically, ignore
+            if (updatingQuantity) return;
 
-            // Convert values from textboxes/richTextBoxes
-            price = Convert.ToDouble(textBox1.Text);               // Price textbox
-            quantity = Convert.ToInt32(textBox2.Text);            // Quantity textbox
-            discountAmt = Convert.ToDouble(richTextBox1.Text);    // Discount Amount textbox
+            // Parse with TryParse to avoid exceptions
+            if (!double.TryParse(textBox1.Text, out double price))
+            {
+                // no valid price -> nothing to do
+                richTextBox2.Text = "0.00";
+                return;
+            }
 
-            // Calculate discounted amount for current item
-            discountedAmt = (price * quantity) - discountAmt;
+            if (!int.TryParse(textBox2.Text, out int quantity))
+            {
+                // invalid quantity -> treat as 0
+                quantity = 0;
+            }
 
-            // Update running totals
-            total_qty += quantity;
-            total_amount += discountedAmt;
+            if (!double.TryParse(richTextBox1.Text, out double discountAmt))
+            {
+                discountAmt = 0.0;
+            }
 
-            // Display results in textboxes/richTextBoxes
-            richTextBox2.Text = discountedAmt.ToString("N2");     // Discounted Amount for this item
-            richTextBox3.Text = total_amount.ToString("N2");      // Total Bills
-            richTextBox4.Text = total_qty.ToString();             // Total Quantity
+            // Compute amount for current item
+            double currentItemAmount = (price * quantity) - discountAmt;
+
+            // Compute deltas from previously recorded values (prevents double counting)
+            double amountDelta = currentItemAmount - currentItemLastAmount;
+            int qtyDelta = quantity - currentItemLastQuantity;
+
+            // Update running totals by deltas
+            total_amount += amountDelta;
+            total_qty += qtyDelta;
+
+            // Save current item state for future delta computations
+            currentItemLastAmount = currentItemAmount;
+            currentItemLastQuantity = quantity;
+
+            // Display the current item calculations and totals
+            richTextBox2.Text = currentItemAmount.ToString("N2");     // Discounted Amount for this item
+            richTextBox3.Text = total_amount.ToString("N2");          // Total Bills
+            richTextBox4.Text = total_qty.ToString();                 // Total Quantity
         }
 
-        // CheckBox6–CheckBox10
         private void checkBox6_Click(object sender, EventArgs e)
         {
-            double price;
-            textBox1.Text = "500.99";
-            richTextBox1.Text = "0.00";
-            price = Convert.ToDouble(textBox1.Text);
-            listBox1.Items.Add(checkBox6.Text + " " + textBox1.Text);
-            textBox2.Text = "0";
-            textBox2.Focus();
+            HandleCheckBoxClick(checkBox6, 500.99);
         }
 
         private void checkBox7_Click(object sender, EventArgs e)
         {
-            double price;
-            textBox1.Text = "275.50";
-            richTextBox1.Text = "0.00";
-            price = Convert.ToDouble(textBox1.Text);
-            listBox1.Items.Add(checkBox7.Text + " " + textBox1.Text);
-            textBox2.Text = "0";
-            textBox2.Focus();
+            HandleCheckBoxClick(checkBox7, 275.50);
         }
 
         private void checkBox8_Click(object sender, EventArgs e)
         {
-            double price;
-            textBox1.Text = "199.75";
-            richTextBox1.Text = "0.00";
-            price = Convert.ToDouble(textBox1.Text);
-            listBox1.Items.Add(checkBox8.Text + " " + textBox1.Text);
-            textBox2.Text = "0";
-            textBox2.Focus();
+            HandleCheckBoxClick(checkBox8, 199.75);
         }
 
         private void checkBox9_Click(object sender, EventArgs e)
         {
-            double price;
-            textBox1.Text = "350.20";
-            richTextBox1.Text = "0.00";
-            price = Convert.ToDouble(textBox1.Text);
-            listBox1.Items.Add(checkBox9.Text + " " + textBox1.Text);
-            textBox2.Text = "0";
-            textBox2.Focus();
+            HandleCheckBoxClick(checkBox9, 350.20);
         }
 
         private void checkBox10_Click(object sender, EventArgs e)
         {
-            double price;
-            textBox1.Text = "420.60";
-            richTextBox1.Text = "0.00";
-            price = Convert.ToDouble(textBox1.Text);
-            listBox1.Items.Add(checkBox10.Text + " " + textBox1.Text);
-            textBox2.Text = "0";
-            textBox2.Focus();
+            HandleCheckBoxClick(checkBox10, 420.60);
         }
 
         // CheckBox16–CheckBox30
         private void checkBox16_Click(object sender, EventArgs e)
         {
-            double price;
-            textBox1.Text = "145.90";
-            richTextBox1.Text = "0.00";
-            price = Convert.ToDouble(textBox1.Text);
-            listBox1.Items.Add(checkBox16.Text + " " + textBox1.Text);
-            textBox2.Text = "0";
-            textBox2.Focus();
+            HandleCheckBoxClick(checkBox16, 145.90);
         }
 
         private void checkBox17_Click(object sender, EventArgs e)
         {
-            double price;
-            textBox1.Text = "380.60";
-            richTextBox1.Text = "0.00";
-            price = Convert.ToDouble(textBox1.Text);
-            listBox1.Items.Add(checkBox17.Text + " " + textBox1.Text);
-            textBox2.Text = "0";
-            textBox2.Focus();
+            HandleCheckBoxClick(checkBox17, 380.60);
         }
 
         private void checkBox18_Click(object sender, EventArgs e)
         {
-            double price;
-            textBox1.Text = "225.35";
-            richTextBox1.Text = "0.00";
-            price = Convert.ToDouble(textBox1.Text);
-            listBox1.Items.Add(checkBox18.Text + " " + textBox1.Text);
-            textBox2.Text = "0";
-            textBox2.Focus();
+            HandleCheckBoxClick(checkBox18, 225.35);
         }
 
         private void checkBox19_Click(object sender, EventArgs e)
         {
-            double price;
-            textBox1.Text = "410.00";
-            richTextBox1.Text = "0.00";
-            price = Convert.ToDouble(textBox1.Text);
-            listBox1.Items.Add(checkBox19.Text + " " + textBox1.Text);
-            textBox2.Text = "0";
-            textBox2.Focus();
+            HandleCheckBoxClick(checkBox19, 410.00);
         }
 
         private void checkBox20_Click(object sender, EventArgs e)
         {
-            double price;
-            textBox1.Text = "330.45";
-            richTextBox1.Text = "0.00";
-            price = Convert.ToDouble(textBox1.Text);
-            listBox1.Items.Add(checkBox20.Text + " " + textBox1.Text);
-            textBox2.Text = "0";
-            textBox2.Focus();
+            HandleCheckBoxClick(checkBox20, 330.45);
         }
 
         private void checkBox21_Click(object sender, EventArgs e)
         {
-            double price;
-            textBox1.Text = "150.80";
-            richTextBox1.Text = "0.00";
-            price = Convert.ToDouble(textBox1.Text);
-            listBox1.Items.Add(checkBox21.Text + " " + textBox1.Text);
-            textBox2.Text = "0";
-            textBox2.Focus();
+            HandleCheckBoxClick(checkBox21, 150.80);
         }
 
         private void checkBox22_Click(object sender, EventArgs e)
         {
-            double price;
-            textBox1.Text = "295.25";
-            richTextBox1.Text = "0.00";
-            price = Convert.ToDouble(textBox1.Text);
-            listBox1.Items.Add(checkBox22.Text + " " + textBox1.Text);
-            textBox2.Text = "0";
-            textBox2.Focus();
+            HandleCheckBoxClick(checkBox22, 295.25);
         }
 
         private void checkBox23_Click(object sender, EventArgs e)
         {
-            double price;
-            textBox1.Text = "360.90";
-            richTextBox1.Text = "0.00";
-            price = Convert.ToDouble(textBox1.Text);
-            listBox1.Items.Add(checkBox23.Text + " " + textBox1.Text);
-            textBox2.Text = "0";
-            textBox2.Focus();
+            HandleCheckBoxClick(checkBox23, 360.90);
         }
 
         private void checkBox24_Click(object sender, EventArgs e)
         {
-            double price;
-            textBox1.Text = "280.10";
-            richTextBox1.Text = "0.00";
-            price = Convert.ToDouble(textBox1.Text);
-            listBox1.Items.Add(checkBox24.Text + " " + textBox1.Text);
-            textBox2.Text = "0";
-            textBox2.Focus();
+            HandleCheckBoxClick(checkBox24, 280.10);
         }
 
         private void checkBox25_Click(object sender, EventArgs e)
         {
-            double price;
-            textBox1.Text = "315.75";
-            richTextBox1.Text = "0.00";
-            price = Convert.ToDouble(textBox1.Text);
-            listBox1.Items.Add(checkBox25.Text + " " + textBox1.Text);
-            textBox2.Text = "0";
-            textBox2.Focus();
+            HandleCheckBoxClick(checkBox25, 315.75);
         }
 
         private void checkBox26_Click(object sender, EventArgs e)
         {
-            double price;
-            textBox1.Text = "190.60";
-            richTextBox1.Text = "0.00";
-            price = Convert.ToDouble(textBox1.Text);
-            listBox1.Items.Add(checkBox26.Text + " " + textBox1.Text);
-            textBox2.Text = "0";
-            textBox2.Focus();
+            HandleCheckBoxClick(checkBox26, 190.60);
         }
 
         private void checkBox27_Click(object sender, EventArgs e)
         {
-            double price;
-            textBox1.Text = "270.40";
-            richTextBox1.Text = "0.00";
-            price = Convert.ToDouble(textBox1.Text);
-            listBox1.Items.Add(checkBox27.Text + " " + textBox1.Text);
-            textBox2.Text = "0";
-            textBox2.Focus();
+            HandleCheckBoxClick(checkBox27, 270.40);
         }
 
         private void checkBox28_Click(object sender, EventArgs e)
         {
-            double price;
-            textBox1.Text = "385.80";
-            richTextBox1.Text = "0.00";
-            price = Convert.ToDouble(textBox1.Text);
-            listBox1.Items.Add(checkBox28.Text + " " + textBox1.Text);
-            textBox2.Text = "0";
-            textBox2.Focus();
+            HandleCheckBoxClick(checkBox28, 385.80);
         }
 
         private void checkBox29_Click(object sender, EventArgs e)
         {
-            double price;
-            textBox1.Text = "320.50";
-            richTextBox1.Text = "0.00";
-            price = Convert.ToDouble(textBox1.Text);
-            listBox1.Items.Add(checkBox29.Text + " " + textBox1.Text);
-            textBox2.Text = "0";
-            textBox2.Focus();
+            HandleCheckBoxClick(checkBox29, 320.50);
         }
 
         private void checkBox30_Click(object sender, EventArgs e)
         {
-            double price;
-            textBox1.Text = "245.90";
-            richTextBox1.Text = "0.00";
-            price = Convert.ToDouble(textBox1.Text);
-            listBox1.Items.Add(checkBox30.Text + " " + textBox1.Text);
-            textBox2.Text = "0";
-            textBox2.Focus();
+            HandleCheckBoxClick(checkBox30, 245.90);
         }
 
         private void button5_Click(object sender, EventArgs e)

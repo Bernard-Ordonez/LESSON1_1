@@ -33,18 +33,28 @@
             this.pOSCashierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.form1Cashier1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.form21Cashier2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cashier2Form4ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pOSAdministratorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.simplePOSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.form1Cashier1ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.form21Cashier2ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.bundlePromoFormToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bundlePromo2Form5ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.payrolApplicationToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.studentRegistrationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.userAccountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.userInfoPageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bundlePromo2Form5ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.userAccountToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.employeeInformationToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.payrolToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.payrolApplicationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.employeeInformationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.employeeRegistrationPageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.studentRegistrationPageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.prelimExamToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.prelimExamToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.reportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salesReportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.productReportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -56,9 +66,11 @@
             this.tileHorizontalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cascadeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -71,13 +83,15 @@
             this.pOSCashierToolStripMenuItem,
             this.pOSAdministratorToolStripMenuItem,
             this.userAccountToolStripMenuItem,
+            this.userAccountToolStripMenuItem1,
             this.payrolToolStripMenuItem,
             this.employeeInformationToolStripMenuItem,
+            this.prelimExamToolStripMenuItem,
             this.reportsToolStripMenuItem,
             this.windowToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1280, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1924, 30);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -86,54 +100,102 @@
             this.pOSCashierToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.form1Cashier1ToolStripMenuItem,
             this.form21Cashier2ToolStripMenuItem,
+            this.cashier2Form4ToolStripMenuItem,
             this.logoutToolStripMenuItem});
             this.pOSCashierToolStripMenuItem.Name = "pOSCashierToolStripMenuItem";
-            this.pOSCashierToolStripMenuItem.Size = new System.Drawing.Size(102, 24);
+            this.pOSCashierToolStripMenuItem.Size = new System.Drawing.Size(102, 26);
             this.pOSCashierToolStripMenuItem.Text = "POS Cashier";
             // 
             // form1Cashier1ToolStripMenuItem
             // 
             this.form1Cashier1ToolStripMenuItem.Name = "form1Cashier1ToolStripMenuItem";
-            this.form1Cashier1ToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
-            this.form1Cashier1ToolStripMenuItem.Text = "Form1(Cashier1)";
+            this.form1Cashier1ToolStripMenuItem.Size = new System.Drawing.Size(169, 26);
+            this.form1Cashier1ToolStripMenuItem.Text = "Simple POS";
             this.form1Cashier1ToolStripMenuItem.Click += new System.EventHandler(this.form1Cashier1ToolStripMenuItem_Click);
             // 
             // form21Cashier2ToolStripMenuItem
             // 
             this.form21Cashier2ToolStripMenuItem.Name = "form21Cashier2ToolStripMenuItem";
-            this.form21Cashier2ToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
-            this.form21Cashier2ToolStripMenuItem.Text = "Form2_1(Cashier2)";
+            this.form21Cashier2ToolStripMenuItem.Size = new System.Drawing.Size(169, 26);
+            this.form21Cashier2ToolStripMenuItem.Text = "Cashier1";
             this.form21Cashier2ToolStripMenuItem.Click += new System.EventHandler(this.form21Cashier2ToolStripMenuItem_Click);
+            // 
+            // cashier2Form4ToolStripMenuItem
+            // 
+            this.cashier2Form4ToolStripMenuItem.Name = "cashier2Form4ToolStripMenuItem";
+            this.cashier2Form4ToolStripMenuItem.Size = new System.Drawing.Size(169, 26);
+            this.cashier2Form4ToolStripMenuItem.Text = "Cashier2";
+            this.cashier2Form4ToolStripMenuItem.Click += new System.EventHandler(this.cashier2Form4ToolStripMenuItem_Click);
             // 
             // logoutToolStripMenuItem
             // 
             this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
-            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
+            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(169, 26);
             this.logoutToolStripMenuItem.Text = "Logout";
             this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
             // 
             // pOSAdministratorToolStripMenuItem
             // 
             this.pOSAdministratorToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.simplePOSToolStripMenuItem,
             this.form1Cashier1ToolStripMenuItem1,
-            this.form21Cashier2ToolStripMenuItem1});
+            this.form21Cashier2ToolStripMenuItem1,
+            this.bundlePromoFormToolStripMenuItem,
+            this.bundlePromo2Form5ToolStripMenuItem1,
+            this.payrolApplicationToolStripMenuItem1,
+            this.studentRegistrationToolStripMenuItem});
             this.pOSAdministratorToolStripMenuItem.Name = "pOSAdministratorToolStripMenuItem";
-            this.pOSAdministratorToolStripMenuItem.Size = new System.Drawing.Size(145, 24);
+            this.pOSAdministratorToolStripMenuItem.Size = new System.Drawing.Size(145, 26);
             this.pOSAdministratorToolStripMenuItem.Text = "POS Administrator";
+            // 
+            // simplePOSToolStripMenuItem
+            // 
+            this.simplePOSToolStripMenuItem.Name = "simplePOSToolStripMenuItem";
+            this.simplePOSToolStripMenuItem.Size = new System.Drawing.Size(227, 26);
+            this.simplePOSToolStripMenuItem.Text = "Simple POS";
+            this.simplePOSToolStripMenuItem.Click += new System.EventHandler(this.simplePOSToolStripMenuItem_Click);
             // 
             // form1Cashier1ToolStripMenuItem1
             // 
             this.form1Cashier1ToolStripMenuItem1.Name = "form1Cashier1ToolStripMenuItem1";
-            this.form1Cashier1ToolStripMenuItem1.Size = new System.Drawing.Size(214, 26);
-            this.form1Cashier1ToolStripMenuItem1.Text = "Form1(Cashier1)";
+            this.form1Cashier1ToolStripMenuItem1.Size = new System.Drawing.Size(227, 26);
+            this.form1Cashier1ToolStripMenuItem1.Text = "Cashier1";
             this.form1Cashier1ToolStripMenuItem1.Click += new System.EventHandler(this.form1Cashier1ToolStripMenuItem1_Click);
             // 
             // form21Cashier2ToolStripMenuItem1
             // 
             this.form21Cashier2ToolStripMenuItem1.Name = "form21Cashier2ToolStripMenuItem1";
-            this.form21Cashier2ToolStripMenuItem1.Size = new System.Drawing.Size(214, 26);
-            this.form21Cashier2ToolStripMenuItem1.Text = "Form2_1(Cashier2)";
+            this.form21Cashier2ToolStripMenuItem1.Size = new System.Drawing.Size(227, 26);
+            this.form21Cashier2ToolStripMenuItem1.Text = "Cashier2";
             this.form21Cashier2ToolStripMenuItem1.Click += new System.EventHandler(this.form21Cashier2ToolStripMenuItem1_Click);
+            // 
+            // bundlePromoFormToolStripMenuItem
+            // 
+            this.bundlePromoFormToolStripMenuItem.Name = "bundlePromoFormToolStripMenuItem";
+            this.bundlePromoFormToolStripMenuItem.Size = new System.Drawing.Size(227, 26);
+            this.bundlePromoFormToolStripMenuItem.Text = "Bundle Promo 1";
+            this.bundlePromoFormToolStripMenuItem.Click += new System.EventHandler(this.bundlePromoFormToolStripMenuItem_Click);
+            // 
+            // bundlePromo2Form5ToolStripMenuItem1
+            // 
+            this.bundlePromo2Form5ToolStripMenuItem1.Name = "bundlePromo2Form5ToolStripMenuItem1";
+            this.bundlePromo2Form5ToolStripMenuItem1.Size = new System.Drawing.Size(227, 26);
+            this.bundlePromo2Form5ToolStripMenuItem1.Text = "Bundle Promo 2";
+            this.bundlePromo2Form5ToolStripMenuItem1.Click += new System.EventHandler(this.bundlePromo2Form5ToolStripMenuItem1_Click);
+            // 
+            // payrolApplicationToolStripMenuItem1
+            // 
+            this.payrolApplicationToolStripMenuItem1.Name = "payrolApplicationToolStripMenuItem1";
+            this.payrolApplicationToolStripMenuItem1.Size = new System.Drawing.Size(227, 26);
+            this.payrolApplicationToolStripMenuItem1.Text = "Payrol Application";
+            this.payrolApplicationToolStripMenuItem1.Click += new System.EventHandler(this.payrolApplicationToolStripMenuItem1_Click);
+            // 
+            // studentRegistrationToolStripMenuItem
+            // 
+            this.studentRegistrationToolStripMenuItem.Name = "studentRegistrationToolStripMenuItem";
+            this.studentRegistrationToolStripMenuItem.Size = new System.Drawing.Size(227, 26);
+            this.studentRegistrationToolStripMenuItem.Text = "Student Registration";
+            this.studentRegistrationToolStripMenuItem.Click += new System.EventHandler(this.studentRegistrationToolStripMenuItem_Click);
             // 
             // userAccountToolStripMenuItem
             // 
@@ -141,29 +203,43 @@
             this.userInfoPageToolStripMenuItem,
             this.bundlePromo2Form5ToolStripMenuItem});
             this.userAccountToolStripMenuItem.Name = "userAccountToolStripMenuItem";
-            this.userAccountToolStripMenuItem.Size = new System.Drawing.Size(123, 24);
+            this.userAccountToolStripMenuItem.Size = new System.Drawing.Size(123, 26);
             this.userAccountToolStripMenuItem.Text = "Bundle Promos";
             // 
             // userInfoPageToolStripMenuItem
             // 
             this.userInfoPageToolStripMenuItem.Name = "userInfoPageToolStripMenuItem";
-            this.userInfoPageToolStripMenuItem.Size = new System.Drawing.Size(250, 26);
-            this.userInfoPageToolStripMenuItem.Text = "Bundle Promo 1(Form3)";
+            this.userInfoPageToolStripMenuItem.Size = new System.Drawing.Size(198, 26);
+            this.userInfoPageToolStripMenuItem.Text = "Bundle Promo 1";
             this.userInfoPageToolStripMenuItem.Click += new System.EventHandler(this.userInfoPageToolStripMenuItem_Click);
             // 
             // bundlePromo2Form5ToolStripMenuItem
             // 
             this.bundlePromo2Form5ToolStripMenuItem.Name = "bundlePromo2Form5ToolStripMenuItem";
-            this.bundlePromo2Form5ToolStripMenuItem.Size = new System.Drawing.Size(250, 26);
-            this.bundlePromo2Form5ToolStripMenuItem.Text = "Bundle Promo 2(Form5)";
+            this.bundlePromo2Form5ToolStripMenuItem.Size = new System.Drawing.Size(198, 26);
+            this.bundlePromo2Form5ToolStripMenuItem.Text = "Bundle Promo 2";
             this.bundlePromo2Form5ToolStripMenuItem.Click += new System.EventHandler(this.bundlePromo2Form5ToolStripMenuItem_Click);
+            // 
+            // userAccountToolStripMenuItem1
+            // 
+            this.userAccountToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.employeeInformationToolStripMenuItem1});
+            this.userAccountToolStripMenuItem1.Name = "userAccountToolStripMenuItem1";
+            this.userAccountToolStripMenuItem1.Size = new System.Drawing.Size(110, 26);
+            this.userAccountToolStripMenuItem1.Text = "User Account";
+            // 
+            // employeeInformationToolStripMenuItem1
+            // 
+            this.employeeInformationToolStripMenuItem1.Name = "employeeInformationToolStripMenuItem1";
+            this.employeeInformationToolStripMenuItem1.Size = new System.Drawing.Size(240, 26);
+            this.employeeInformationToolStripMenuItem1.Text = "Employee Information";
             // 
             // payrolToolStripMenuItem
             // 
             this.payrolToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.payrolApplicationToolStripMenuItem});
             this.payrolToolStripMenuItem.Name = "payrolToolStripMenuItem";
-            this.payrolToolStripMenuItem.Size = new System.Drawing.Size(63, 24);
+            this.payrolToolStripMenuItem.Size = new System.Drawing.Size(63, 26);
             this.payrolToolStripMenuItem.Text = "Payrol";
             // 
             // payrolApplicationToolStripMenuItem
@@ -179,8 +255,8 @@
             this.employeeRegistrationPageToolStripMenuItem,
             this.studentRegistrationPageToolStripMenuItem});
             this.employeeInformationToolStripMenuItem.Name = "employeeInformationToolStripMenuItem";
-            this.employeeInformationToolStripMenuItem.Size = new System.Drawing.Size(162, 24);
-            this.employeeInformationToolStripMenuItem.Text = "Emp/Stu Information";
+            this.employeeInformationToolStripMenuItem.Size = new System.Drawing.Size(98, 26);
+            this.employeeInformationToolStripMenuItem.Text = "Accounting";
             // 
             // employeeRegistrationPageToolStripMenuItem
             // 
@@ -195,6 +271,21 @@
             this.studentRegistrationPageToolStripMenuItem.Text = "Student Registration Page";
             this.studentRegistrationPageToolStripMenuItem.Click += new System.EventHandler(this.studentRegistrationPageToolStripMenuItem_Click);
             // 
+            // prelimExamToolStripMenuItem
+            // 
+            this.prelimExamToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.prelimExamToolStripMenuItem1});
+            this.prelimExamToolStripMenuItem.Name = "prelimExamToolStripMenuItem";
+            this.prelimExamToolStripMenuItem.Size = new System.Drawing.Size(101, 26);
+            this.prelimExamToolStripMenuItem.Text = "PrelimExam";
+            // 
+            // prelimExamToolStripMenuItem1
+            // 
+            this.prelimExamToolStripMenuItem1.Name = "prelimExamToolStripMenuItem1";
+            this.prelimExamToolStripMenuItem1.Size = new System.Drawing.Size(174, 26);
+            this.prelimExamToolStripMenuItem1.Text = "Prelim Exam";
+            this.prelimExamToolStripMenuItem1.Click += new System.EventHandler(this.prelimExamToolStripMenuItem1_Click);
+            // 
             // reportsToolStripMenuItem
             // 
             this.reportsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -204,7 +295,7 @@
             this.payrolReportsToolStripMenuItem,
             this.userReportsToolStripMenuItem});
             this.reportsToolStripMenuItem.Name = "reportsToolStripMenuItem";
-            this.reportsToolStripMenuItem.Size = new System.Drawing.Size(74, 24);
+            this.reportsToolStripMenuItem.Size = new System.Drawing.Size(74, 26);
             this.reportsToolStripMenuItem.Text = "Reports";
             // 
             // salesReportsToolStripMenuItem
@@ -244,7 +335,7 @@
             this.tileHorizontalToolStripMenuItem,
             this.cascadeToolStripMenuItem});
             this.windowToolStripMenuItem.Name = "windowToolStripMenuItem";
-            this.windowToolStripMenuItem.Size = new System.Drawing.Size(78, 24);
+            this.windowToolStripMenuItem.Size = new System.Drawing.Size(78, 26);
             this.windowToolStripMenuItem.Text = "Window";
             // 
             // tileVerticalToolStripMenuItem
@@ -272,19 +363,16 @@
             // 
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripTextBox1,
             this.toolStripButton1,
-            this.toolStripButton2});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 28);
+            this.toolStripSeparator2,
+            this.toolStripButton2,
+            this.toolStripTextBox1,
+            this.toolStripSeparator1});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 30);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1280, 27);
+            this.toolStrip1.Size = new System.Drawing.Size(1924, 31);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
-            // 
-            // toolStripTextBox1
-            // 
-            this.toolStripTextBox1.Name = "toolStripTextBox1";
-            this.toolStripTextBox1.Size = new System.Drawing.Size(100, 27);
             // 
             // toolStripButton1
             // 
@@ -292,8 +380,13 @@
             this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(29, 24);
+            this.toolStripButton1.Size = new System.Drawing.Size(29, 28);
             this.toolStripButton1.Text = "toolStripButton1";
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 31);
             // 
             // toolStripButton2
             // 
@@ -301,19 +394,31 @@
             this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
             this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(29, 24);
+            this.toolStripButton2.Size = new System.Drawing.Size(29, 28);
             this.toolStripButton2.Text = "toolStripButton2";
+            // 
+            // toolStripTextBox1
+            // 
+            this.toolStripTextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.toolStripTextBox1.Name = "toolStripTextBox1";
+            this.toolStripTextBox1.Size = new System.Drawing.Size(100, 31);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 31);
             // 
             // AdminPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1280, 687);
+            this.ClientSize = new System.Drawing.Size(1924, 1055);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
             this.Name = "AdminPage";
             this.Text = "AdminPage";
+            this.Load += new System.EventHandler(this.AdminPage_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
@@ -356,5 +461,17 @@
         private System.Windows.Forms.ToolStripMenuItem studentRegistrationPageToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem bundlePromo2Form5ToolStripMenuItem;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.ToolStripMenuItem prelimExamToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem prelimExamToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripMenuItem bundlePromoFormToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem bundlePromo2Form5ToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem payrolApplicationToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem studentRegistrationToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cashier2Form4ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem simplePOSToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem userAccountToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripMenuItem employeeInformationToolStripMenuItem1;
     }
 }
