@@ -1,6 +1,6 @@
 ﻿namespace LESSON1_1
 {
-    partial class Form6
+    partial class Payroll_functionfrm
     {
         /// <summary>
         /// Required designer variable.
@@ -858,6 +858,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Form6";
             this.Text = "Form6";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form6_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

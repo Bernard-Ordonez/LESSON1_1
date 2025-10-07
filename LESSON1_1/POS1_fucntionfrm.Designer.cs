@@ -1,6 +1,6 @@
 ﻿namespace LESSON1_1
 {
-    partial class Form2_1
+    partial class POS1_fucntionfrm
     {
         /// <summary>
         /// Required designer variable.

@@ -33,7 +33,7 @@ namespace LESSON1_1
 
         private void form21Cashier2ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form2_1 newMDIChild = new Form2_1();
+            POS1_fucntionfrm newMDIChild = new POS1_fucntionfrm();
             newMDIChild.MdiParent = this;
             newMDIChild.Show();
         }
@@ -52,7 +52,7 @@ namespace LESSON1_1
         }
         private void form1Cashier1ToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            Form2_1 newMDIChild = new Form2_1();
+            POS1_fucntionfrm newMDIChild = new POS1_fucntionfrm();
             newMDIChild.MdiParent = this;
             newMDIChild.Show();
         }
@@ -67,7 +67,7 @@ namespace LESSON1_1
         // Payroll
         private void payrolApplicationToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form6 newMDIChild = new Form6();
+            Payroll_functionfrm newMDIChild = new Payroll_functionfrm();
             newMDIChild.MdiParent = this;
             newMDIChild.Show();
         }
@@ -98,7 +98,7 @@ namespace LESSON1_1
 
         private void bundlePromo2Form5ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form5 newMDIChild = new Form5();
+            POS2_functionfrm newMDIChild = new POS2_functionfrm();
             newMDIChild.MdiParent = this;
             newMDIChild.Show();
         }
@@ -128,14 +128,14 @@ namespace LESSON1_1
 
         private void bundlePromo2Form5ToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            Form5 newMDIChild = new Form5();
+            POS2_functionfrm newMDIChild = new POS2_functionfrm();
             newMDIChild.MdiParent = this;
             newMDIChild.Show();
         }
 
         private void payrolApplicationToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            Form5 newMDIChild = new Form5();
+            POS2_functionfrm newMDIChild = new POS2_functionfrm();
             newMDIChild.MdiParent = this;
             newMDIChild.Show();
         }

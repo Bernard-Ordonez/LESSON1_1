@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace LESSON1_1
 {
-    public partial class Form6 : Form
+    public partial class Payroll_functionfrm : Form
     {
-        // ---- Contribution Tables (from PayrollCat_Function) ----
+        // ---- Contribution Tables  ----
         private readonly double[] philRanges = { 10000, 11000, 12000, 13000, 14000, 15000, 16000, 17000, 18000, 19000, 20000,
                                 21000, 22000, 23000, 24000, 25000, 26000, 27000, 28000, 29000, 30000,
                                 31000, 32000, 33000, 34000, 35000, 36000, 37000, 38000, 39000 };
@@ -29,7 +29,7 @@ namespace LESSON1_1
                                 308.80, 327.00, 345.20, 363.30, 381.50, 399.70, 417.80, 436.00,
                                 454.20, 472.30, 490.50, 508.70, 526.80, 545.00, 563.20, 581.30 };
 
-        public Form6()
+        public Payroll_functionfrm()
         {
             InitializeComponent();
         }
@@ -40,6 +40,7 @@ namespace LESSON1_1
             textBox6.Enabled = false;
             textBox9.Enabled = false;
             textBox13.Enabled = false;
+            textBox14.Enabled = false;
             textBox15.Enabled = true;
             textBox16.Enabled = true;
             textBox12.Enabled = true;

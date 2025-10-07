@@ -12,16 +12,15 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace LESSON1_1
 {
-    public partial class Form5 : Form
+    public partial class POS2_functionfrm : Form
     {
         private double total_amount = 0;
         private int total_qty = 0;
 
-        // new helpers to prevent double-counting
         private int currentItemLastQuantity = 0;
         private double currentItemLastAmount = 0.0;
         private bool updatingQuantity = false;
-        public Form5()
+        public POS2_functionfrm()
         {
             InitializeComponent();
         }
@@ -34,13 +33,10 @@ namespace LESSON1_1
 
             // Add to listbox
             listBox1.Items.Add(chk.Text + " " + textBox1.Text);
-
-            // Prevent TextChanged from reacting to this programmatic change
             updatingQuantity = true;
             textBox2.Text = "0";
             updatingQuantity = false;
 
-            // Reset tracking for this new current item
             currentItemLastQuantity = 0;
             currentItemLastAmount = 0.0;
 
@@ -200,7 +196,6 @@ namespace LESSON1_1
         }
         private void button3_Click(object sender, EventArgs e)
         {
-            // Reset totals and current-item trackers
             total_amount = 0;
             total_qty = 0;
             currentItemLastAmount = 0;
@@ -281,20 +276,17 @@ namespace LESSON1_1
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-            // If we are setting text programmatically, ignore
             if (updatingQuantity) return;
 
-            // Parse with TryParse to avoid exceptions
             if (!double.TryParse(textBox1.Text, out double price))
             {
-                // no valid price -> nothing to do
                 richTextBox2.Text = "0.00";
                 return;
             }
 
             if (!int.TryParse(textBox2.Text, out int quantity))
             {
-                // invalid quantity -> treat as 0
+                // invalid quantity, treat as 0
                 quantity = 0;
             }
 
@@ -306,15 +298,12 @@ namespace LESSON1_1
             // Compute amount for current item
             double currentItemAmount = (price * quantity) - discountAmt;
 
-            // Compute deltas from previously recorded values (prevents double counting)
             double amountDelta = currentItemAmount - currentItemLastAmount;
             int qtyDelta = quantity - currentItemLastQuantity;
 
-            // Update running totals by deltas
             total_amount += amountDelta;
             total_qty += qtyDelta;
 
-            // Save current item state for future delta computations
             currentItemLastAmount = currentItemAmount;
             currentItemLastQuantity = quantity;
 

@@ -58,11 +58,11 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form2_1.cs">
+    <Compile Include="POS1_fucntionfrm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form2_1.Designer.cs">
-      <DependentUpon>Form2_1.cs</DependentUpon>
+    <Compile Include="POS1_fucntionfrm.Designer.cs">
+      <DependentUpon>POS1_fucntionfrm.cs</DependentUpon>
     </Compile>
     <Compile Include="Form3.cs">
       <SubType>Form</SubType>
@@ -82,11 +82,11 @@
     <Compile Include="Form5%28Listbox%29.Designer.cs">
       <DependentUpon>Form5%28Listbox%29.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form5.cs">
+    <Compile Include="POS2_functionfrm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form5.Designer.cs">
-      <DependentUpon>Form5.cs</DependentUpon>
+    <Compile Include="POS2_functionfrm.Designer.cs">
+      <DependentUpon>POS2_functionfrm.cs</DependentUpon>
     </Compile>
     <Compile Include="Form6%28Payslip%29.cs">
       <SubType>Form</SubType>
@@ -94,11 +94,11 @@
     <Compile Include="Form6%28Payslip%29.Designer.cs">
       <DependentUpon>Form6%28Payslip%29.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form6.cs">
+    <Compile Include="Payroll_functionfrm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form6.Designer.cs">
-      <DependentUpon>Form6.cs</DependentUpon>
+    <Compile Include="Payroll_functionfrm.Designer.cs">
+      <DependentUpon>Payroll_functionfrm.cs</DependentUpon>
     </Compile>
     <Compile Include="LOGIN_MBI_.cs">
       <SubType>Form</SubType>
@@ -126,8 +126,8 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form2_1.resx">
-      <DependentUpon>Form2_1.cs</DependentUpon>
+    <EmbeddedResource Include="POS1_fucntionfrm.resx">
+      <DependentUpon>POS1_fucntionfrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form3.resx">
       <DependentUpon>Form3.cs</DependentUpon>
@@ -138,14 +138,14 @@
     <EmbeddedResource Include="Form5%28Listbox%29.resx">
       <DependentUpon>Form5%28Listbox%29.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form5.resx">
-      <DependentUpon>Form5.cs</DependentUpon>
+    <EmbeddedResource Include="POS2_functionfrm.resx">
+      <DependentUpon>POS2_functionfrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form6%28Payslip%29.resx">
       <DependentUpon>Form6%28Payslip%29.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form6.resx">
-      <DependentUpon>Form6.cs</DependentUpon>
+    <EmbeddedResource Include="Payroll_functionfrm.resx">
+      <DependentUpon>Payroll_functionfrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LOGIN_MBI_.resx">
       <DependentUpon>LOGIN_MBI_.cs</DependentUpon>

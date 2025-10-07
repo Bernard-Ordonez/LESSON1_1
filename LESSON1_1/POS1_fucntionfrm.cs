@@ -11,9 +11,9 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace LESSON1_1
 {
-    public partial class Form2_1 : Form
+    public partial class POS1_fucntionfrm : Form
     {
-        public Form2_1()
+        public POS1_fucntionfrm()
         {
             InitializeComponent();
             textBox2.Focus();
