@@ -1105,6 +1105,7 @@
             this.Controls.Add(this.button1);
             this.Name = "Form5";
             this.Text = "Form5";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form5_Load);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
