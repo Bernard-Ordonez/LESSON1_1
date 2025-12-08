@@ -1,6 +1,6 @@
 ﻿namespace LESSON1_1
 {
-    partial class Payroll_functionfrm
+    partial class Payroll_Classfrm
     {
         /// <summary>
         /// Required designer variable.

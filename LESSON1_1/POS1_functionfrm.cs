@@ -11,9 +11,9 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace LESSON1_1
 {
-    public partial class POS1_fucntionfrm : Form
+    public partial class POS1_functionfrm : Form
     {
-        public POS1_fucntionfrm()
+        public POS1_functionfrm()
         {
             InitializeComponent();
             textBox2.Focus();
@@ -52,6 +52,21 @@ namespace LESSON1_1
             textBox2.Focus();
         }
 
+        // Food Items (Strict numeric handling for price)
+        private void SetFoodItem(string itemName, decimal price)
+        {
+            try
+            {
+                currentItem = itemName;
+                currentPrice = price;
+                textBox1.Text = currentItem;
+                textBox3.Text = currentPrice.ToString("F2");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Invalid price value.");
+            }
+        }
         // Discount Calculation 
         private void ComputeDiscounts()
         {
@@ -178,22 +193,6 @@ namespace LESSON1_1
             textBox13.Clear(); // Cash Rendered
             textBox14.Clear(); // Change
                                // KEEP totals in textBox10, textBox11, textBox12
-        }
-
-        // Food Items (Strict numeric handling for price)
-        private void SetFoodItem(string itemName, decimal price)
-        {
-            try
-            {
-                currentItem = itemName;
-                currentPrice = price;
-                textBox1.Text = currentItem;
-                textBox3.Text = currentPrice.ToString("F2");
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Invalid price value.");
-            }
         }
 
         private void pictureBox1_Click(object sender, EventArgs e) { SetFoodItem("Nashville Hot Chicken", 150); }

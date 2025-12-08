@@ -52,17 +52,59 @@
     <Compile Include="AdminPage.Designer.cs">
       <DependentUpon>AdminPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="employee_dbconnection.cs" />
+    <Compile Include="employee_registration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="employee_registration.Designer.cs">
+      <DependentUpon>employee_registration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="employee_reports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="employee_reports.Designer.cs">
+      <DependentUpon>employee_reports.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="POS1_fucntionfrm.cs">
+    <Compile Include="loginDb_dbconnections.cs" />
+    <Compile Include="PayrollClass1.cs" />
+    <Compile Include="Payroll_Classfrm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="POS1_fucntionfrm.Designer.cs">
-      <DependentUpon>POS1_fucntionfrm.cs</DependentUpon>
+    <Compile Include="Payroll_Classfrm.Designer.cs">
+      <DependentUpon>Payroll_Classfrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Payrol_DatabaseApp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payrol_DatabaseApp.Designer.cs">
+      <DependentUpon>Payrol_DatabaseApp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="payrol_dbconnection.cs" />
+    <Compile Include="payrol_report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="payrol_report.Designer.cs">
+      <DependentUpon>payrol_report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="payrol_variables.cs" />
+    <Compile Include="POS1Class1.cs" />
+    <Compile Include="POS1_Classfrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="POS1_Classfrm.Designer.cs">
+      <DependentUpon>POS1_Classfrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="POS1_functionfrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="POS1_functionfrm.Designer.cs">
+      <DependentUpon>POS1_functionfrm.cs</DependentUpon>
     </Compile>
     <Compile Include="Form3.cs">
       <SubType>Form</SubType>
@@ -81,6 +123,13 @@
     </Compile>
     <Compile Include="Form5%28Listbox%29.Designer.cs">
       <DependentUpon>Form5%28Listbox%29.cs</DependentUpon>
+    </Compile>
+    <Compile Include="POS2Class1.cs" />
+    <Compile Include="POS2_Classfrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="POS2_Classfrm.Designer.cs">
+      <DependentUpon>POS2_Classfrm.cs</DependentUpon>
     </Compile>
     <Compile Include="POS2_functionfrm.cs">
       <SubType>Form</SubType>
@@ -106,28 +155,80 @@
     <Compile Include="LOGIN_MBI_.Designer.cs">
       <DependentUpon>LOGIN_MBI_.cs</DependentUpon>
     </Compile>
-    <Compile Include="POS1__Function_%28F2_1%29.cs">
+    <Compile Include="POS_Admin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="POS1__Function_%28F2_1%29.Designer.cs">
-      <DependentUpon>POS1__Function_%28F2_1%29.cs</DependentUpon>
+    <Compile Include="POS_Admin.Designer.cs">
+      <DependentUpon>POS_Admin.cs</DependentUpon>
     </Compile>
+    <Compile Include="pos_dbconnection.cs" />
     <Compile Include="PrelimExam%28Form5%29.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="PrelimExam%28Form5%29.Designer.cs">
       <DependentUpon>PrelimExam%28Form5%29.cs</DependentUpon>
     </Compile>
+    <Compile Include="Price_Item_Value.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="sales_reports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sales_reports.Designer.cs">
+      <DependentUpon>sales_reports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SQL_LongMethod_2.0.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SQL_LongMethod_2.0.Designer.cs">
+      <DependentUpon>SQL_LongMethod_2.0.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SQL_POS1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SQL_POS1.Designer.cs">
+      <DependentUpon>SQL_POS1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="useraccount_db_connection.cs" />
+    <Compile Include="useraccount_report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="useraccount_report.Designer.cs">
+      <DependentUpon>useraccount_report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="user_account.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="user_account.Designer.cs">
+      <DependentUpon>user_account.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Variables.cs" />
     <EmbeddedResource Include="AdminPage.resx">
       <DependentUpon>AdminPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="employee_registration.resx">
+      <DependentUpon>employee_registration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="employee_reports.resx">
+      <DependentUpon>employee_reports.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="POS1_fucntionfrm.resx">
-      <DependentUpon>POS1_fucntionfrm.cs</DependentUpon>
+    <EmbeddedResource Include="Payroll_Classfrm.resx">
+      <DependentUpon>Payroll_Classfrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payrol_DatabaseApp.resx">
+      <DependentUpon>Payrol_DatabaseApp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="payrol_report.resx">
+      <DependentUpon>payrol_report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="POS1_Classfrm.resx">
+      <DependentUpon>POS1_Classfrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="POS1_functionfrm.resx">
+      <DependentUpon>POS1_functionfrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form3.resx">
       <DependentUpon>Form3.cs</DependentUpon>
@@ -137,6 +238,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form5%28Listbox%29.resx">
       <DependentUpon>Form5%28Listbox%29.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="POS2_Classfrm.resx">
+      <DependentUpon>POS2_Classfrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="POS2_functionfrm.resx">
       <DependentUpon>POS2_functionfrm.cs</DependentUpon>
@@ -150,8 +254,8 @@
     <EmbeddedResource Include="LOGIN_MBI_.resx">
       <DependentUpon>LOGIN_MBI_.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="POS1__Function_%28F2_1%29.resx">
-      <DependentUpon>POS1__Function_%28F2_1%29.cs</DependentUpon>
+    <EmbeddedResource Include="POS_Admin.resx">
+      <DependentUpon>POS_Admin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PrelimExam%28Form5%29.resx">
       <DependentUpon>PrelimExam%28Form5%29.cs</DependentUpon>
@@ -166,6 +270,21 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="sales_reports.resx">
+      <DependentUpon>sales_reports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SQL_LongMethod_2.0.resx">
+      <DependentUpon>SQL_LongMethod_2.0.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SQL_POS1.resx">
+      <DependentUpon>SQL_POS1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="useraccount_report.resx">
+      <DependentUpon>useraccount_report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="user_account.resx">
+      <DependentUpon>user_account.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

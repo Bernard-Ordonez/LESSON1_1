@@ -53,7 +53,7 @@ namespace LESSON1_1
             }
             else if (richTextBox1.Text == Cashier2 && richTextBox2.Text == Cashier2Pass)
             {
-                POS1_fucntionfrm newMDIChild = new POS1_fucntionfrm();
+                POS1_functionfrm newMDIChild = new POS1_functionfrm();
                 newMDIChild.Show();
             }
             else if (richTextBox1.Text == Accounting && richTextBox2.Text == AccountingPass)

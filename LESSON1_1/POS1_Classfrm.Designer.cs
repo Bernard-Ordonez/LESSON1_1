@@ -1,6 +1,6 @@
 ﻿namespace LESSON1_1
 {
-    partial class POS1_fucntionfrm
+    partial class POS1_Classfrm
     {
         /// <summary>
         /// Required designer variable.
@@ -1139,7 +1139,7 @@
             this.label18.TabIndex = 110;
             this.label18.Text = "By: Bernard Ordonez";
             // 
-            // Form2_1
+            // POS1_functionfrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -1155,7 +1155,7 @@
             this.Controls.Add(this.label17);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.label18);
-            this.Name = "Form2_1";
+            this.Name = "POS1_functionfrm";
             this.Text = "Form2_1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form2_1_Load);

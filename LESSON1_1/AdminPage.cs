@@ -33,7 +33,7 @@ namespace LESSON1_1
 
         private void form21Cashier2ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            POS1_fucntionfrm newMDIChild = new POS1_fucntionfrm();
+            POS1_functionfrm newMDIChild = new POS1_functionfrm();
             newMDIChild.MdiParent = this;
             newMDIChild.Show();
         }
@@ -52,7 +52,7 @@ namespace LESSON1_1
         }
         private void form1Cashier1ToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            POS1_fucntionfrm newMDIChild = new POS1_fucntionfrm();
+            POS1_functionfrm newMDIChild = new POS1_functionfrm();
             newMDIChild.MdiParent = this;
             newMDIChild.Show();
         }

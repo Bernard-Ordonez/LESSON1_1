@@ -170,22 +170,28 @@ namespace LESSON1_1
 
         private void button1_Click(object sender, EventArgs e)
         {
+            try
             {
-                // Convert inputs to double
                 double cashGiven = Convert.ToDouble(richTextBox5.Text);
                 double totalAmountPaid = Convert.ToDouble(richTextBox3.Text);
 
-                // Calculate change
                 double change = cashGiven - totalAmountPaid;
-
-                // Display change
                 richTextBox6.Text = change.ToString("N2");
 
-                // Add summary to ListBox
                 listBox1.Items.Add("Total Bills: " + richTextBox3.Text);
                 listBox1.Items.Add("Cash Given: " + richTextBox5.Text);
                 listBox1.Items.Add("Change: " + richTextBox6.Text);
                 listBox1.Items.Add("Total No. of Items: " + richTextBox4.Text);
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("Please enter valid numeric values for Cash Given and Total Bills.",
+                    "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An unexpected error occurred: " + ex.Message,
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void button2_Click(object sender, EventArgs e)
@@ -278,39 +284,31 @@ namespace LESSON1_1
         {
             if (updatingQuantity) return;
 
-            if (!double.TryParse(textBox1.Text, out double price))
+            try
             {
-                richTextBox2.Text = "0.00";
-                return;
-            }
+                double price = double.TryParse(textBox1.Text, out double p) ? p : 0;
+                int quantity = int.TryParse(textBox2.Text, out int q) ? q : 0;
+                double discountAmt = double.TryParse(richTextBox1.Text, out double d) ? d : 0;
 
-            if (!int.TryParse(textBox2.Text, out int quantity))
+                double currentItemAmount = (price * quantity) - discountAmt;
+                double amountDelta = currentItemAmount - currentItemLastAmount;
+                int qtyDelta = quantity - currentItemLastQuantity;
+
+                total_amount += amountDelta;
+                total_qty += qtyDelta;
+
+                currentItemLastAmount = currentItemAmount;
+                currentItemLastQuantity = quantity;
+
+                richTextBox2.Text = currentItemAmount.ToString("N2");
+                richTextBox3.Text = total_amount.ToString("N2");
+                richTextBox4.Text = total_qty.ToString();
+            }
+            catch (Exception ex)
             {
-                // invalid quantity, treat as 0
-                quantity = 0;
+                MessageBox.Show("Error updating totals: " + ex.Message,
+                    "Computation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-            if (!double.TryParse(richTextBox1.Text, out double discountAmt))
-            {
-                discountAmt = 0.0;
-            }
-
-            // Compute amount for current item
-            double currentItemAmount = (price * quantity) - discountAmt;
-
-            double amountDelta = currentItemAmount - currentItemLastAmount;
-            int qtyDelta = quantity - currentItemLastQuantity;
-
-            total_amount += amountDelta;
-            total_qty += qtyDelta;
-
-            currentItemLastAmount = currentItemAmount;
-            currentItemLastQuantity = quantity;
-
-            // Display the current item calculations and totals
-            richTextBox2.Text = currentItemAmount.ToString("N2");     // Discounted Amount for this item
-            richTextBox3.Text = total_amount.ToString("N2");          // Total Bills
-            richTextBox4.Text = total_qty.ToString();                 // Total Quantity
         }
 
         private void checkBox6_Click(object sender, EventArgs e)

@@ -12,22 +12,21 @@ namespace LESSON1_1
 {
     public partial class Payroll_functionfrm : Form
     {
-        // ---- Contribution Tables  ----
-        private readonly double[] philRanges = { 10000, 11000, 12000, 13000, 14000, 15000, 16000, 17000, 18000, 19000, 20000,
-                                21000, 22000, 23000, 24000, 25000, 26000, 27000, 28000, 29000, 30000,
-                                31000, 32000, 33000, 34000, 35000, 36000, 37000, 38000, 39000 };
-        private readonly double[] philAmounts = { 137.50, 151.25, 165.00, 178.75, 192.50, 206.25, 220.00, 233.75, 247.50, 261.25,
-                                 275.25, 288.75, 302.50, 316.25, 330.00, 343.75, 357.50, 371.25, 385.00, 398.75,
-                                 412.50, 426.25, 440.00, 453.75, 467.50, 481.25, 495.00, 508.75, 522.50, 536.25 };
+        // ---- Contribution Tables ----
 
-        private readonly double[] sssRanges = { 1000, 1249.99, 1749.99, 2249.99, 2749.99, 3249.99, 3749.99, 4249.99,
-                               4749.99, 5249.99, 5749.99, 6249.99, 6749.99, 7249.99, 7749.99, 8249.99,
-                               8749.99, 9249.99, 9749.99, 10249.99, 10749.99, 11249.99, 11749.99, 12249.99,
-                               12749.99, 13249.99, 13749.99, 14249.99, 14749.99, 15249.99, 15749.99, 16249.99 };
-        private readonly double[] sssAmounts = { 0.00, 36.30, 54.50, 72.70, 90.80, 109.00, 127.20, 145.30,
-                                163.50, 181.70, 199.80, 218.00, 236.20, 254.30, 272.50, 290.70,
-                                308.80, 327.00, 345.20, 363.30, 381.50, 399.70, 417.80, 436.00,
-                                454.20, 472.30, 490.50, 508.70, 526.80, 545.00, 563.20, 581.30 };
+        // SSS contribution ranges and fixed amounts
+        private readonly double[] sssRanges = { 0, 5250, 5750, 6250, 6750, 7250, 7750, 8250, 8750, 9250,
+                                        9750, 10250, 10750, 11250, 11750, 12250, 12750, 13250, 13750, 14250,
+                                        14750, 15250, 15750, 16250, 16750, 17250, 17750, 18250, 18750, 19250,
+                                        19750, 20250, 20750, 21250, 21750, 22250, 22750, 23250, 23750, 24250,
+                                        24750, 25250, 25750, 26250, 26750, 27250, 27750, 28250, 28750, 29250,
+                                        29750, 30250, 30750, 31250, 31750, 32250, 32750, 33250, 33750, 34250, 34750 };
+        private readonly double[] sssAmounts = { 250, 275, 300, 325, 350, 375, 400, 425, 450, 475,
+                                          500, 525, 550, 575, 600, 625, 650, 675, 700, 725,
+                                          750, 775, 800, 825, 850, 875, 900, 925, 950, 975,
+                                          1000, 1025, 1050, 1075, 1100, 1125, 1150, 1175, 1200, 1225,
+                                          1250, 1275, 1300, 1325, 1350, 1375, 1400, 1425, 1450, 1475,
+                                          1500, 1525, 1550, 1575, 1600, 1625, 1650, 1675, 1700, 1725, 1750 };
 
         public Payroll_functionfrm()
         {
@@ -54,6 +53,42 @@ namespace LESSON1_1
             textBox32.Enabled = false;
         }
 
+        private double GetWithholdingTax(double income)
+        {
+            if (income <= 20832)
+                return 0;
+            else if (income <= 33333)
+                return (income - 20833) * 0.20;
+            else if (income <= 66667)
+                return 2500 + (income - 33333) * 0.25;
+            else if (income <= 166667)
+                return 10833 + (income - 66667) * 0.30;
+            else if (income <= 666667)
+                return 40833 + (income - 166667) * 0.32;
+            else
+                return 200833 + (income - 666667) * 0.35;
+        }
+        private double GetSSSContribution(double income)
+        {
+            double contribution = sssAmounts.Last();
+            for (int i = 0; i < sssRanges.Length; i++)
+            {
+                if (income <= sssRanges[i])
+                {
+                    contribution = sssAmounts[i];
+                    break;
+                }
+            }
+            return contribution;
+        }
+        private double GetPhilHealthContribution(double income)
+        {
+            double philhealth = income * 0.025;
+            if (philhealth < 500) philhealth = 500;
+            if (philhealth > 5000) philhealth = 5000;
+            return philhealth;
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             // ---------- Inputs ----------
@@ -71,45 +106,21 @@ namespace LESSON1_1
             double grossIncome = basicIncome + honorariumIncome + otherIncome;
 
             // ---------- Cutoff (semi-monthly) ----------
-            double basicCutoff = basicIncome / 2;
-            double honorariumCutoff = honorariumIncome / 2;
-            double otherCutoff = otherIncome / 2;
-            double grossCutoff = grossIncome / 2;
+            double basicCutoff = basicIncome;
+            double honorariumCutoff = honorariumIncome;
+            double otherCutoff = otherIncome;
+            double grossCutoff = grossIncome;
 
             // ---------- SSS Contribution ----------
-            double sss_contrib = sssAmounts.Last();
-            for (int i = 0; i < sssRanges.Length; i++)
-            {
-                if (grossIncome <= sssRanges[i])
-                {
-                    sss_contrib = sssAmounts[i];
-                    break;
-                }
-            }
+            double sss_contrib = GetSSSContribution(grossIncome);
 
             // ---------- PhilHealth ----------
-            double philhealth_contrib = philAmounts.Last();
-            for (int i = 0; i < philRanges.Length; i++)
-            {
-                if (grossIncome <= philRanges[i])
-                {
-                    philhealth_contrib = philAmounts[i];
-                    break;
-                }
-            }
+            double philhealth_contrib = GetPhilHealthContribution(grossIncome);
 
             // ---------- Pagibig ----------
-            double pagibig_contrib = 100;
+            double pagibig_contrib = 200;
+            double tax_contrib = GetWithholdingTax(grossIncome);
 
-            // ---------- Withholding Tax ----------
-            double annualGross = grossIncome * 24;
-            double tax_contrib = 0;
-            if (grossIncome <= 10416.67) tax_contrib = 0;
-            else if (grossIncome <= 16666.67) tax_contrib = ((annualGross - 250000) * 0.2) / 24;
-            else if (grossIncome <= 33333.33) tax_contrib = (((annualGross - 400000) * 0.25 + 30000) / 24);
-            else if (grossIncome <= 83333.33) tax_contrib = (((annualGross - 800000) * 0.30 + 130000) / 24);
-            else if (grossIncome <= 333333.33) tax_contrib = (((annualGross - 2000000) * 0.32 + 490000) / 24);
-            else tax_contrib = (((annualGross - 8000000) * 0.35 + 2410000) / 24);
 
             // ---------- Display ----------
             textBox5.Text = basicCutoff.ToString("N2");
