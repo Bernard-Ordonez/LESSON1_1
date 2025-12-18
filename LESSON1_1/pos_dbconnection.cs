@@ -91,15 +91,15 @@ namespace LESSON1_1
         }
         public void pos_select_cashier()
         {
-            pos_sql = "SELECT * FROM pos_nameTbl INNER JOIN pos_picTbl ON pos_nameTbl.pos_id = pos_pricTbl.pos_id INNER JOIN pos_priceTbl ON pos_pricTbl.pos_id = pos_pricTbl.pos_id WHERE pos_nameTbl.pos_id = 1";
+            pos_sql = "SELECT * FROM pos_nameTbl INNER JOIN pos_picTbl ON pos_nameTbl.pos_id = pos_picTbl.pos_id INNER JOIN pos_priceTbl ON pos_picTbl.pos_id = pos_priceTbl.pos_id WHERE pos_nameTbl.pos_id = 1";
         }
         public void pos_select_cashier1()
         {
-            pos_sql = "SELECT * FROM pos_nameTbl INNER JOIN pos_picTbl ON pos_nameTbl.pos_id = pos_pricTbl.pos_id INNER JOIN pos_priceTbl ON pos_pricTbl.pos_id = pos_pricTbl.pos_id WHERE pos_nameTbl.pos_id = 2";
+            pos_sql = "SELECT * FROM pos_nameTbl INNER JOIN pos_picTbl ON pos_nameTbl.pos_id = pos_picTbl.pos_id INNER JOIN pos_priceTbl ON pos_picTbl.pos_id = pos_priceTbl.pos_id WHERE pos_nameTbl.pos_id = 2";
         }
         public void pos_select_cashier_display()
         {
-            pos_sql = "SELECT * FROM pos_nameTbl INNER JOIN pos_picTbl ON pos_nameTbl.pos_id = pos_pricTbl.pos_id INNER JOIN pos_priceTbl ON pos_pricTbl.pos_id = pos_pricTbl.pos_id WHERE pos_nameTbl.pos_id = 'Administrator'";
+            pos_sql = "SELECT * FROM pos_nameTbl INNER JOIN pos_picTbl ON pos_nameTbl.pos_id = pos_picTbl.pos_id INNER JOIN pos_priceTbl ON pos_picTbl.pos_id = pos_pricTbl.pos_id WHERE pos_nameTbl.pos_id = 'Administrator'";
         }
         public void pos_select_cashier_selectDisplay()
         {

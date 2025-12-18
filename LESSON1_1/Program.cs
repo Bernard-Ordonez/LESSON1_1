@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LESSON1_1;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,7 @@ namespace LESSON1_1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new sales_reports());
+            Application.Run(new LoginFrm_Database());
         }
     }
 }

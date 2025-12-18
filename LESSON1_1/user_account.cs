@@ -24,6 +24,12 @@ namespace LESSON1_1
             emp_idTxtbox.Clear();
             userIDTxtbox.Clear();
             firstnameTxtbox.Clear();
+            middlenameTxtbox.Clear();
+            surnameTxtbox.Clear();
+            designationTxtbox.Clear();
+            picpathTxtbox.Clear();
+            usernameTxtbox.Clear();
+            passwordTxtbox.Clear();
         }
 
         private void user_account_Load(object sender, EventArgs e)
@@ -34,18 +40,41 @@ namespace LESSON1_1
             designationTxtbox.Enabled = false;
             picpathTxtbox.Enabled = false;
             picpathTxtbox.Hide();
-            useraccount_db_connect.useraccount_sql = "SELECT pos_empRegTbl.emp_id, emp_fname, emp_mname, emp_surname, position, useraccount_id, username, password, user_status, account_type FROM pos_empRegTbl INNER JOIN useraccountTbl ON pos_empRegTbl.emp_id = useraccountTbl.emp_id";
-            useraccount_db_connect.useraccount_cmd();
-            useraccount_db_connect.useraccount_sqldataadapterSelect();
-            useraccount_db_connect.useraccount_sqldatasetSELECT();
-            dataGridView1.DataSource = useraccount_db_connect.useraccount_sql_dataset.Tables[0];
+            useraccount_db_connect.useraccount_sql = "SELECT pos_empRegTbl.emp_id, emp_fname, emp_mname, emp_surname, position, user_id, username, password, user_status, account_type FROM pos_empRegTbl INNER JOIN useraccountTbl ON pos_empRegTbl.emp_id = useraccountTbl.emp_id";
+
+            try
+            {
+                useraccount_db_connect.useraccount_cmd();
+                useraccount_db_connect.useraccount_sqldataadapterSelect();
+                useraccount_db_connect.useraccount_sqldatasetSELECT();
+
+                if (useraccount_db_connect.useraccount_sql_dataset.Tables.Count > 0)
+                {
+                    dataGridView1.DataSource = useraccount_db_connect.useraccount_sql_dataset.Tables[0];
+                }
+            }
+            catch (Exception ex) { MessageBox.Show("Error loading data: " + ex.Message); }
+
+            account_statusComboBox.Items.AddRange(new object[]
+            {
+                "Active",
+                "Inactive"
+
+            });
+            accountTypeComboBox.Items.AddRange(new object[]
+            {
+                "Administrator",
+                "Cashier1",
+                "Cashier2",
+                "HR Staff",
+                "Accounting Staff",
+                "IT Staff"
+            });
         }
 
         // SEARCH
         private void button1_Click(object sender, EventArgs e)
         {
-            try
-            {
                 useraccount_db_connect.useraccount_sql = "SELECT emp_id, emp_fname, emp_mname, emp_surname, position, picpath FROM pos_empRegTbl WHERE emp_id = '" + emp_idTxtbox.Text + "'";
                 useraccount_db_connect.useraccount_cmd();
                 useraccount_db_connect.useraccount_sqldataadapterSelect();
@@ -56,17 +85,10 @@ namespace LESSON1_1
                 designationTxtbox.Text = useraccount_db_connect.useraccount_sql_dataset.Tables[0].Rows[0][4].ToString();
                 picpathTxtbox.Text = useraccount_db_connect.useraccount_sql_dataset.Tables[0].Rows[0][5].ToString();
                 pictureBox1.Image = Image.FromFile(picpathTxtbox.Text);
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("There is an error in this area. Please contact your administrator!(2)");
-            }
         }
         // SEARCH FOR UPDATE
         private void button2_Click(object sender, EventArgs e)
         {
-            try
-            {
                 useraccount_db_connect.useraccount_sql = "SELECT pos_empRegTbl.emp_id, emp_fname, emp_mname, emp_surname, position, picpath, user_id, username, password, user_status, account_type FROM pos_empRegTbl INNER JOIN useraccountTbl ON pos_empRegTbl.emp_id = useraccountTbl.emp_id WHERE user_id = '" + userIDTxtbox.Text + "'";
                 useraccount_db_connect.useraccount_cmd();
                 useraccount_db_connect.useraccount_sqldataadapterSelect();
@@ -82,11 +104,6 @@ namespace LESSON1_1
                 passwordTxtbox.Text = useraccount_db_connect.useraccount_sql_dataset.Tables[0].Rows[0][8].ToString();
                 account_statusComboBox.Text = useraccount_db_connect.useraccount_sql_dataset.Tables[0].Rows[0][9].ToString();
                 accountTypeComboBox.Text = useraccount_db_connect.useraccount_sql_dataset.Tables[0].Rows[0][10].ToString();
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Error occurs in this area. Please contact your administrator!(3)");
-            }
         }
         // UPDATE   
         private void button4_Click(object sender, EventArgs e)
@@ -96,7 +113,7 @@ namespace LESSON1_1
                 useraccount_db_connect.useraccount_sql = "UPDATE useraccountTbl SET account_type = '" + accountTypeComboBox.Text + "', username = '" + usernameTxtbox.Text + "', password = '" + passwordTxtbox.Text + "', confirm_password = '" + confirmPasswordTxtbox.Text + "', user_status = '" + account_statusComboBox.Text + "' WHERE user_id = '" + userIDTxtbox.Text + "'";
                 useraccount_db_connect.useraccount_cmd();
                 useraccount_db_connect.useraccount_sqldataadapterDelete();
-                useraccount_db_connect.useraccount_sql = "SELECT pos_empRegTbl.emp_id, emp_fname, emp_mname, emp_surname, position, useraccount_id, username, password, user_status, account_type FROM pos_empRegTbl INNER JOIN useraccountTbl ON pos_empRegTbl.emp_id = useraccountTbl.emp_id";
+                useraccount_db_connect.useraccount_sql = "SELECT pos_empRegTbl.emp_id, emp_fname, emp_mname, emp_surname, position, user_id, username, password, user_status, account_type FROM pos_empRegTbl INNER JOIN useraccountTbl ON pos_empRegTbl.emp_id = useraccountTbl.emp_id";
                 useraccount_db_connect.useraccount_cmd();
                 useraccount_db_connect.useraccount_sqldataadapterSelect();
                 useraccount_db_connect.useraccount_sqldatasetSELECT();
@@ -110,43 +127,44 @@ namespace LESSON1_1
         // DELETE
         private void button3_Click(object sender, EventArgs e)
         {
-            try
-            {
-                useraccount_db_connect.useraccount_sql = "UPDATE useraccountTbl SET account_type = '" + accountTypeComboBox.Text + "', username = '" + usernameTxtbox.Text + "', password = '" + passwordTxtbox.Text + "', confirm_password = '" + confirmPasswordTxtbox.Text + "', user_status = '" + account_statusComboBox.Text + "' WHERE user_id = '" + userIDTxtbox.Text + "'";
-                useraccount_db_connect.useraccount_cmd();
-                useraccount_db_connect.useraccount_sqldataadapterDelete();
-                useraccount_db_connect.useraccount_sql = "SELECT pos_empRegTbl.emp_id, emp_fname, emp_mname, emp_surname, position, useraccount_id, username, password, user_status, account_type FROM pos_empRegTbl INNER JOIN useraccountTbl ON pos_empRegTbl.emp_id = useraccountTbl.emp_id";
-                useraccount_db_connect.useraccount_cmd();
-                useraccount_db_connect.useraccount_sqldataadapterSelect();
-                useraccount_db_connect.useraccount_sqldatasetSELECT();
-                dataGridView1.DataSource = useraccount_db_connect.useraccount_sql_dataset.Tables[0];
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("There is an error in this area. Please contact your administrator!(5)");
-            }
+            useraccount_db_connect.useraccount_sql = "DELETE FROM useraccountTbl WHERE user_id = '" + userIDTxtbox.Text + "'";
+            useraccount_db_connect.useraccount_cmd();
+            useraccount_db_connect.useraccount_sqldataadapterDelete();
+
+            useraccount_db_connect.useraccount_sql = "SELECT pos_empRegTbl.emp_id, emp_fname, emp_mname, emp_surname, position, picpath, user_id, username, password, user_status, account_type FROM pos_empRegTbl INNER JOIN useraccountTbl ON pos_empRegTbl.emp_id = useraccountTbl.emp_id";
+            useraccount_db_connect.useraccount_cmd();
+            useraccount_db_connect.useraccount_sqldataadapterSelect();
+            useraccount_db_connect.useraccount_sqldatasetSELECT();
+
+            dataGridView1.DataSource = useraccount_db_connect.useraccount_sql_dataset.Tables[0];
         }
         // SUBMIT
         private void button7_Click(object sender, EventArgs e)
         {
-            try
-            {
                 firstnameTxtbox.Enabled = false;
                 middlenameTxtbox.Enabled = false;
                 surnameTxtbox.Enabled = false;
                 designationTxtbox.Enabled = false;
                 picpathTxtbox.Enabled = false;
                 picpathTxtbox.Hide();
-                useraccount_db_connect.useraccount_sql = "SELECT pos_empRegTbl.emp_id, emp_fname, emp_mname, emp_surname, position, useraccount_id, username, password, user_status, account_type FROM pos_empRegTbl INNER JOIN useraccountTbl ON pos_empRegTbl.emp_id = useraccountTbl.emp_id";
+                useraccount_db_connect.useraccount_sql = "INSERT INTO useraccountTbl (user_id, account_type, username, password, confirm_password, user_status, emp_id) VALUES ('" + userIDTxtbox.Text + "', '" + accountTypeComboBox.Text + "', '" + usernameTxtbox.Text + "', '" + passwordTxtbox.Text + "', '" + confirmPasswordTxtbox.Text + "', '" + account_statusComboBox.Text + "', '" + emp_idTxtbox.Text + "')";
+                useraccount_db_connect.useraccount_cmd();
+                useraccount_db_connect.useraccount_sqldataadapterInsert();
+
+                useraccount_db_connect.useraccount_sql = "SELECT pos_empRegTbl.emp_id, emp_fname, emp_mname, emp_surname, position, picpath, user_id, username, password, user_status, account_type FROM pos_empRegTbl INNER JOIN useraccountTbl ON pos_empRegTbl.emp_id = useraccountTbl.emp_id";
                 useraccount_db_connect.useraccount_cmd();
                 useraccount_db_connect.useraccount_sqldataadapterSelect();
                 useraccount_db_connect.useraccount_sqldatasetSELECT();
-                dataGridView1.DataSource = useraccount_db_connect.useraccount_sql_dataset.Tables[0];
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("There is an error in this area. Please contact your administrator!(6)");
-            }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            cleartextboxes();
         }
     }
 }

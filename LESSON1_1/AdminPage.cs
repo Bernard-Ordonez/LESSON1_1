@@ -110,15 +110,6 @@ namespace LESSON1_1
             newMDIChild.MdiParent = this;
             newMDIChild.Show();
         }
-
-        // Prelim
-        private void prelimExamToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            PrelimExam_Form5_ newMDIChild = new PrelimExam_Form5_();
-            newMDIChild.MdiParent = this;
-            newMDIChild.Show();
-        }
-
         private void bundlePromoFormToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form3 newMDIChild = new Form3();
@@ -151,6 +142,81 @@ namespace LESSON1_1
         {
             MessageBox.Show("Welcome to AdminPage", "Greeting", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.WindowState = FormWindowState.Maximized;
+        }
+
+        private void salesReportsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            sales_reports newMDIChild = new sales_reports();
+            newMDIChild.MdiParent = this;
+            newMDIChild.Show();
+        }
+
+        private void employeesReportsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            employee_reports newMDIChild = new employee_reports();
+            newMDIChild.MdiParent = this;
+            newMDIChild.Show();
+        }
+
+        private void payrolReportsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            payrol_report newMDIChild = new payrol_report();
+            newMDIChild.MdiParent = this;
+            newMDIChild.Show();
+        }
+
+        private void userReportsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            user_account newMDIChild = new user_account();
+            newMDIChild.MdiParent = this;
+            newMDIChild.Show();
+        }
+
+        private void SQL_Cashier1_Click(object sender, EventArgs e)
+        {
+            SQL_Cashier1 newMDIChild = new SQL_Cashier1();
+            newMDIChild.MdiParent = this;
+            newMDIChild.Show();
+        }
+
+        private void sQLCashier2ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SQL_Cashier2 newMDIChild = new SQL_Cashier2();
+            newMDIChild.MdiParent = this;
+            newMDIChild.Show();
+        }
+
+        private void hRStaffToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            employee_registration newMDIChild = new employee_registration();
+            newMDIChild.MdiParent = this;
+            newMDIChild.Show();
+        }
+
+        private void accountingStaffToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Payrol_DatabaseApp newMDIChild = new Payrol_DatabaseApp();
+            newMDIChild.MdiParent = this;
+            newMDIChild.Show();
+        }
+
+        private void iTStaffToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            user_account newMDIChild = new user_account();
+            newMDIChild.MdiParent = this;
+            newMDIChild.Show();
+        }
+
+        private void pOSAdminToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            POS_Admin newMDIChild = new POS_Admin();
+            newMDIChild.MdiParent = this;
+            newMDIChild.Show();
+        }
+
+        private void closeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

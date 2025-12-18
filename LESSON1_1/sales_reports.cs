@@ -40,6 +40,16 @@ namespace LESSON1_1
         }
         private void sales_reports_Load(object sender, EventArgs e)
         {
+            optionCombo.Items.AddRange(new object[]
+            {
+                "transaction_id",
+                "terminal_number",
+                "date and time",
+                "product name",
+                "employee_number"
+
+            });
+
             try
             {
                 posdb_connect.pos_sql = "SELECT * FROM salesTbl";

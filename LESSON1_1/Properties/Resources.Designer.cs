@@ -286,6 +286,36 @@ namespace LESSON1_1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap magnifying_glass_icon_isolated_on_white_background_search_illustration_vector {
+            get {
+                object obj = ResourceManager.GetObject("magnifying-glass-icon-isolated-on-white-background-search-illustration-vector", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap magnifying_glass_icon_isolated_on_white_background_search_illustration_vector1 {
+            get {
+                object obj = ResourceManager.GetObject("magnifying-glass-icon-isolated-on-white-background-search-illustration-vector1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap magnifying_glass_icon_isolated_on_white_background_search_illustration_vector2 {
+            get {
+                object obj = ResourceManager.GetObject("magnifying-glass-icon-isolated-on-white-background-search-illustration-vector2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Orange_Chicken {
             get {
                 object obj = ResourceManager.GetObject("Orange Chicken", resourceCulture);

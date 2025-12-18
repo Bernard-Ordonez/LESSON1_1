@@ -100,20 +100,22 @@
             this.total_deducTxtbox = new System.Windows.Forms.TextBox();
             this.label40 = new System.Windows.Forms.Label();
             this.label41 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.payslip_viewListBox = new System.Windows.Forms.ListBox();
             this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.print = new System.Windows.Forms.Button();
+            this.PreviewPayslip = new System.Windows.Forms.Button();
+            this.New = new System.Windows.Forms.Button();
+            this.Exit = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.picpathTxtbox = new System.Windows.Forms.TextBox();
             this.others_loanCombo = new System.Windows.Forms.ComboBox();
             this.button10 = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -273,6 +275,7 @@
             this.basic_numhrsTxtbox.Name = "basic_numhrsTxtbox";
             this.basic_numhrsTxtbox.Size = new System.Drawing.Size(575, 22);
             this.basic_numhrsTxtbox.TabIndex = 92;
+            this.basic_numhrsTxtbox.TextChanged += new System.EventHandler(this.basic_numhrs_TxtChange);
             // 
             // basic_netincomeTxtbox
             // 
@@ -331,6 +334,7 @@
             this.hono_numhrsTxtbox.Name = "hono_numhrsTxtbox";
             this.hono_numhrsTxtbox.Size = new System.Drawing.Size(575, 22);
             this.hono_numhrsTxtbox.TabIndex = 99;
+            this.hono_numhrsTxtbox.TextChanged += new System.EventHandler(this.hono_numhrsTxtbox_Changed);
             // 
             // hono_netincomeTxtbox
             // 
@@ -389,6 +393,7 @@
             this.other_numhrsTxtbox.Name = "other_numhrsTxtbox";
             this.other_numhrsTxtbox.Size = new System.Drawing.Size(575, 22);
             this.other_numhrsTxtbox.TabIndex = 108;
+            this.other_numhrsTxtbox.TextChanged += new System.EventHandler(this.other_numhrsTxtbox_TxtChanged);
             // 
             // label14
             // 
@@ -710,14 +715,6 @@
             this.label41.TabIndex = 143;
             this.label41.Text = "DEDUCTION SUMMARY:\r\n";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(1204, 49);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(177, 142);
-            this.pictureBox1.TabIndex = 146;
-            this.pictureBox1.TabStop = false;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -739,52 +736,57 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(26, 918);
+            this.button2.Location = new System.Drawing.Point(26, 856);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(145, 38);
             this.button2.TabIndex = 149;
             this.button2.Text = "CALCULATE";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button3
+            // print
             // 
-            this.button3.Location = new System.Drawing.Point(177, 918);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(145, 38);
-            this.button3.TabIndex = 150;
-            this.button3.Text = "PRINT PAYSLIP";
-            this.button3.UseVisualStyleBackColor = true;
+            this.print.Location = new System.Drawing.Point(177, 856);
+            this.print.Name = "print";
+            this.print.Size = new System.Drawing.Size(145, 38);
+            this.print.TabIndex = 150;
+            this.print.Text = "PRINT PAYSLIP";
+            this.print.UseVisualStyleBackColor = true;
+            this.print.Click += new System.EventHandler(this.print_Click);
             // 
-            // button4
+            // PreviewPayslip
             // 
-            this.button4.Location = new System.Drawing.Point(328, 918);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(266, 38);
-            this.button4.TabIndex = 151;
-            this.button4.Text = "PREVIEW PAYSLIP DETAILS";
-            this.button4.UseVisualStyleBackColor = true;
+            this.PreviewPayslip.Location = new System.Drawing.Point(328, 856);
+            this.PreviewPayslip.Name = "PreviewPayslip";
+            this.PreviewPayslip.Size = new System.Drawing.Size(266, 38);
+            this.PreviewPayslip.TabIndex = 151;
+            this.PreviewPayslip.Text = "PREVIEW PAYSLIP DETAILS";
+            this.PreviewPayslip.UseVisualStyleBackColor = true;
+            this.PreviewPayslip.Click += new System.EventHandler(this.PreviewPayslip_Click);
             // 
-            // button5
+            // New
             // 
-            this.button5.Location = new System.Drawing.Point(600, 918);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(145, 38);
-            this.button5.TabIndex = 152;
-            this.button5.Text = "NEW";
-            this.button5.UseVisualStyleBackColor = true;
+            this.New.Location = new System.Drawing.Point(600, 856);
+            this.New.Name = "New";
+            this.New.Size = new System.Drawing.Size(145, 38);
+            this.New.TabIndex = 152;
+            this.New.Text = "NEW";
+            this.New.UseVisualStyleBackColor = true;
+            this.New.Click += new System.EventHandler(this.New_Click);
             // 
-            // button6
+            // Exit
             // 
-            this.button6.Location = new System.Drawing.Point(751, 918);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(145, 38);
-            this.button6.TabIndex = 153;
-            this.button6.Text = "EXIT";
-            this.button6.UseVisualStyleBackColor = true;
+            this.Exit.Location = new System.Drawing.Point(751, 856);
+            this.Exit.Name = "Exit";
+            this.Exit.Size = new System.Drawing.Size(145, 38);
+            this.Exit.TabIndex = 153;
+            this.Exit.Text = "EXIT";
+            this.Exit.UseVisualStyleBackColor = true;
+            this.Exit.Click += new System.EventHandler(this.Exit_Click_1);
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(902, 918);
+            this.button7.Location = new System.Drawing.Point(902, 856);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(145, 38);
             this.button7.TabIndex = 154;
@@ -794,7 +796,7 @@
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(1053, 918);
+            this.button8.Location = new System.Drawing.Point(1053, 856);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(145, 38);
             this.button8.TabIndex = 155;
@@ -804,7 +806,7 @@
             // 
             // button9
             // 
-            this.button9.Location = new System.Drawing.Point(1204, 918);
+            this.button9.Location = new System.Drawing.Point(1204, 856);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(145, 38);
             this.button9.TabIndex = 156;
@@ -831,27 +833,47 @@
             // 
             this.button10.Location = new System.Drawing.Point(552, 17);
             this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(114, 65);
+            this.button10.Size = new System.Drawing.Size(69, 61);
             this.button10.TabIndex = 159;
             this.button10.Text = "SEARCH - EDIT";
             this.button10.UseVisualStyleBackColor = true;
             this.button10.Click += new System.EventHandler(this.button10_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImage = global::LESSON1_1.Properties.Resources.magnifying_glass_icon_isolated_on_white_background_search_illustration_vector1;
+            this.pictureBox2.Image = global::LESSON1_1.Properties.Resources.magnifying_glass_icon_isolated_on_white_background_search_illustration_vector2;
+            this.pictureBox2.Location = new System.Drawing.Point(541, 17);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(80, 66);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 160;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(1204, 49);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(177, 142);
+            this.pictureBox1.TabIndex = 146;
+            this.pictureBox1.TabStop = false;
             // 
             // Payrol_DatabaseApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1924, 1055);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.button10);
             this.Controls.Add(this.others_loanCombo);
             this.Controls.Add(this.picpathTxtbox);
             this.Controls.Add(this.button9);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.button7);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.Exit);
+            this.Controls.Add(this.New);
+            this.Controls.Add(this.PreviewPayslip);
+            this.Controls.Add(this.print);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.payslip_viewListBox);
             this.Controls.Add(this.label2);
@@ -932,6 +954,7 @@
             this.Text = "Payrol_DatabaseApp";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Payrol_DatabaseApp_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -1016,15 +1039,16 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ListBox payslip_viewListBox;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button print;
+        private System.Windows.Forms.Button PreviewPayslip;
+        private System.Windows.Forms.Button New;
+        private System.Windows.Forms.Button Exit;
         private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button9;
         private System.Windows.Forms.TextBox picpathTxtbox;
         private System.Windows.Forms.ComboBox others_loanCombo;
-        private System.Windows.Forms.Button button10;
+        public System.Windows.Forms.Button button9;
+        public System.Windows.Forms.Button button8;
+        public System.Windows.Forms.Button button10;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

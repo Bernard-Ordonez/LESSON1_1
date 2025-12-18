@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace LESSON1_1
 {
@@ -43,6 +44,18 @@ namespace LESSON1_1
         {
             payrol_db_connect.payroll_sql = "SELECT * FROM pos_empRegTbl";
             payrol_select();
+            optionCombo.Items.AddRange(new object[]
+            {
+                "employee_number",
+                "surname",
+                "firstname",
+                "department",
+                "designation",
+                "zipcode",
+                "province",
+                "city"
+            });
+
         }
 
         //SEARCH

@@ -136,6 +136,9 @@
   <data name="yrkGs91" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\yrkGs91.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Chicken &amp; Rice Casserole" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Chicken &amp; Rice Casserole.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="yrkGs9" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\yrkGs9.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -148,6 +151,9 @@
   <data name="Chili-Honey Glazed Lechon Kawali" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Chili-Honey Glazed Lechon Kawali.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="magnifying-glass-icon-isolated-on-white-background-search-illustration-vector" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\magnifying-glass-icon-isolated-on-white-background-search-illustration-vector.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="organic-food-background-hand-drawn-concept-free-vector" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\organic-food-background-hand-drawn-concept-free-vector.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -157,11 +163,11 @@
   <data name="The Filet Mignon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\The Filet Mignon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Indian Chicken 65 (deep-fried pieces with distinct regional spices)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Indian Chicken 65 (deep-fried pieces with distinct regional spices).JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="pixelated-burger-universe-stockcake" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pixelated-burger-universe-stockcake.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="istockphoto-1182393436-612x612" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\istockphoto-1182393436-612x612.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="360_F_302529420_N3ptzETZvq7fxYjYcDMsQuUvSASzUh6h" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\360_F_302529420_N3ptzETZvq7fxYjYcDMsQuUvSASzUh6h.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -172,14 +178,14 @@
   <data name="Breaded Pork Chop" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Breaded Pork Chop.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="pexels-photo-1435895" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pexels-photo-1435895.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Fried Calamansi Pork Chops" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Fried Calamansi Pork Chops.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Caprese Chicken Gnocchi Skillet" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Caprese Chicken Gnocchi Skillet.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Pork Tonkatsu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Pork Tonkatsu.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Chicken Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Chicken Logo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -202,25 +208,28 @@
   <data name="Steak Au Poivre" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Steak Au Poivre.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="magnifying-glass-icon-isolated-on-white-background-search-illustration-vector1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\magnifying-glass-icon-isolated-on-white-background-search-illustration-vector.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Orange Chicken" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Orange Chicken.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Korean Fried Chicken" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Korean Fried Chicken.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Chicken &amp; Rice Casserole" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Chicken &amp; Rice Casserole.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Indian Chicken 65 (deep-fried pieces with distinct regional spices)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Indian Chicken 65 (deep-fried pieces with distinct regional spices).JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Carmalized Onions and Blue Cheese beef" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Carmalized Onions and Blue Cheese beef.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Pork Tonkatsu" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Pork Tonkatsu.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="pexels-photo-1435895" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pexels-photo-1435895.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Bundle A" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Bundle A.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="istockphoto-1182393436-612x612" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\istockphoto-1182393436-612x612.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="magnifying-glass-icon-isolated-on-white-background-search-illustration-vector2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\magnifying-glass-icon-isolated-on-white-background-search-illustration-vector.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

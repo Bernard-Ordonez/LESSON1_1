@@ -39,6 +39,16 @@ namespace LESSON1_1
 
         private void useraccount_report_Load(object sender, EventArgs e)
         {
+            optionCombo.Items.AddRange(new object[]
+            {
+                "user_id",
+                "employee_number",
+                "surname",
+                "firstname",
+                "active",
+                "deactivate"
+
+            });
             useraccount_db_connect.useraccount_sql = "SELECT pos_empRegTbl.emp_id, emp_fname, emp_mname, emp_surname, emp_age, emp_gender, emp_department, position, user_id, username, password, user_status, account_type FROM pos_empRegTbl INNER JOIN useraccountTbl ON pos_empRegTbl.emp_id = useraccountTbl.emp_id";
             useraccount_select();
         }

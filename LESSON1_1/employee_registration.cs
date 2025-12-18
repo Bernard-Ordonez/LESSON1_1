@@ -14,6 +14,7 @@ namespace LESSON1_1
     {
         string picpath;
         employee_dbconnection emp_db_connect = new employee_dbconnection();
+        private bool isloading = true;
         public employee_registration()
         {
             emp_db_connect.employee_connString();
@@ -36,9 +37,9 @@ namespace LESSON1_1
             elem_addressTxtbox.Clear(); elem_awardTxtbox.Clear();
             junior_nameTxtbox.Clear(); junior_addressTxtbox.Clear();
             junior_awardTxtbox.Clear(); senior_nameTxtbox.Clear();
-            senior_addressTxtbox.Clear(); senior_awardTxtbox.Clear();
-            senior_courseTxtbox.Clear(); college_school_nameTxtbox.Clear();
-            college_addressTxtbox.Clear(); college_degreeTxtbox.Clear();
+            senior_addressTxtbox.Clear(); senior_trackTxtbox.Clear();
+            senior_awardTxtbox.Clear(); college_school_nameTxtbox.Clear();
+            college_addressTxtbox.Clear(); college_courseTxtbox.Clear();
             college_awardTxtbox.Clear(); othersTxtBox.Clear();
             positionTxtbox.Clear(); employeeStatusTxtBox.Clear();
             departmentTxtBox.Clear(); emp_num_dependents.Clear();
@@ -47,8 +48,31 @@ namespace LESSON1_1
             emp_idTxtBox.Focus();
 
         }
+        private void center_panel()
+        {
+            panel1.Left = (this.ClientSize.Width - panel1.Width) / 2;
+            panel1.Top = (this.ClientSize.Height - panel1.Height) / 2;
+        }
         private void employee_registration_Load(object sender, EventArgs e)
         {
+            center_panel();
+            this.Resize += (s, ev) => center_panel();
+            isloading = true;
+
+            genderCombox.Items.AddRange(new object[]
+            {
+                "Male",
+                "Female",
+                "Undisclosed"
+           
+            });
+            statusCombox.Items.AddRange(new object[]
+            {
+                "Single",
+                "Married",
+                "Widowed",
+                "Divorced"
+            });
             try
             {
                 picturepathTxtBox.Hide();
@@ -97,66 +121,64 @@ namespace LESSON1_1
 
                 // Bind the result table to a DataGridView
                 dataGridView1.DataSource = emp_db_connect.employee_sql_dataset.Tables[0];
-
                 fnameTxtbox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][2].ToString();
                 mnameTxtbox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][3].ToString();
                 surnameTxtbox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][4].ToString();
                 ageComboBox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][5].ToString();
 
-                genderCombox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][49].ToString();   // emp_gender
-                sssTxtbox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][50].ToString();     // emp_sss_no
-                tinTxtbox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][6].ToString();
-                philhealthTxtbox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][7].ToString();
-                pagibigTxtbox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][8].ToString();
+                genderCombox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][6].ToString();   // emp_gender
+                sssTxtbox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][7].ToString();      // emp_sss_no
+                tinTxtbox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][8].ToString();
+                philhealthTxtbox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][9].ToString();
+                pagibigTxtbox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][10].ToString();
 
-                statusCombox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][9].ToString();
-                heightTxtbox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][10].ToString();
-                weightTxtBox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][11].ToString();
+                statusCombox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][11].ToString();
+                heightTxtbox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][12].ToString();
+                weightTxtBox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][13].ToString();
 
-                current_yrsTxtbox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][12].ToString();
-                current_ho_noTxtbox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][13].ToString();
-                currentSub_noTxtbox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][14].ToString();
-                current_phaseTxtbox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][15].ToString();
-                current_streetTxtbox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][16].ToString();
-                current_barangayTxtbox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][17].ToString();
-                current_municipalityTxtbox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][18].ToString();
-                current_cityTxtbox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][19].ToString();
-                current_stateTxtBox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][20].ToString();
-                current_countryTxtbox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][21].ToString();
-                current_ZipTxtbox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][22].ToString();
+                current_yrsTxtbox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][14].ToString();
+                current_ho_noTxtbox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][15].ToString();
+                currentSub_noTxtbox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][16].ToString();
+                current_phaseTxtbox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][17].ToString();
+                current_streetTxtbox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][18].ToString();
+                current_barangayTxtbox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][19].ToString();
+                current_municipalityTxtbox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][20].ToString();
+                current_cityTxtbox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][21].ToString();
+                current_stateTxtBox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][22].ToString();
+                current_countryTxtbox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][23].ToString();
+                current_ZipTxtbox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][24].ToString();
 
-                elem_nameTxtbox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][23].ToString();
-                elem_addressTxtbox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][24].ToString();
-                elem_yr_gradTxtbox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][25].ToString();
-                elem_awardTxtbox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][26].ToString();
+                elem_nameTxtbox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][25].ToString();
+                elem_addressTxtbox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][26].ToString();
+                elem_yr_gradTxtbox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][27].ToString();
+                elem_awardTxtbox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][28].ToString();
 
-                junior_nameTxtbox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][27].ToString();
-                junior_addressTxtbox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][28].ToString();
-                junior_yr_gradTxtbox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][29].ToString();
-                junior_awardTxtbox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][30].ToString();
+                junior_nameTxtbox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][29].ToString();
+                junior_addressTxtbox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][30].ToString();
+                junior_yr_gradTxtbox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][31].ToString();
+                junior_awardTxtbox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][32].ToString();
 
-                senior_nameTxtbox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][31].ToString();
-                senior_addressTxtbox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][32].ToString();
-                senior_yr_gradTxtbox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][33].ToString();
-                senior_awardTxtbox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][34].ToString();
+                senior_nameTxtbox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][33].ToString();
+                senior_addressTxtbox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][34].ToString();
+                senior_yr_gradTxtbox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][35].ToString();
+                senior_awardTxtbox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][36].ToString();
+                senior_trackTxtbox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][37].ToString(); // track
 
-                senior_courseTxtbox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][35].ToString();  // track
+                college_school_nameTxtbox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][38].ToString();
+                college_addressTxtbox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][39].ToString();
+                college_yr_gradTxtbox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][40].ToString();
+                college_awardTxtbox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][41].ToString();
+                college_courseTxtbox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][42].ToString();
+                othersTxtBox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][43].ToString();
 
-                college_school_nameTxtbox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][36].ToString();
-                college_addressTxtbox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][37].ToString();
-                college_yr_gradTxtbox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][39].ToString();
-                college_awardTxtbox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][40].ToString();
-                college_degreeTxtbox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][38].ToString();
+                positionTxtbox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][44].ToString();
+                employeeStatusTxtBox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][45].ToString();
+                date_hiredTxtbox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][46].ToString();
+                departmentTxtBox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][47].ToString();
+                emp_num_dependents.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][48].ToString();
 
-                othersTxtBox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][41].ToString();
-                positionTxtbox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][42].ToString();
-                employeeStatusTxtBox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][43].ToString();
-                date_hiredTxtbox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][44].ToString();
-                departmentTxtBox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][45].ToString();
-                emp_num_dependents.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][46].ToString();
+                picturepathTxtBox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][49].ToString();
 
-                // Final assignments (from image_cf9be7.png, which is reversed)
-                picturepathTxtBox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][47].ToString();
                 // Note: 'picbox.Image' is case-sensitive, matching the pattern of other control names.
                 picbox.Image = Image.FromFile(picturepathTxtBox.Text);
         }
@@ -164,8 +186,13 @@ namespace LESSON1_1
         // ADD
         private void button3_Click(object sender, EventArgs e)
         {
-
-                emp_db_connect.employee_sql = "INSERT INTO pos_empRegTbl (emp_id, " +
+            MessageBox.Show(
+                "Data saved successfully (POS_EmpRegTBL).",
+                "Confirmation",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Information
+                );
+            emp_db_connect.employee_sql = "INSERT INTO pos_empRegTbl (emp_id, " +
                     "emp_fname, emp_mname, emp_surname, emp_age, emp_gender, " +
                     "emp_sss_no, " + "emp_tin_no, " +
                     "emp_philhealth_no, " + "emp_pagibig_no," +
@@ -224,11 +251,11 @@ namespace LESSON1_1
                     "" + senior_nameTxtbox.Text + "', '" +
                     "" + senior_addressTxtbox.Text + "', '" +
                     "" + senior_yr_gradTxtbox.Text + "', '" +
+                    "" + senior_trackTxtbox.Text + "', '" +
                     "" + senior_awardTxtbox.Text + "', '" +
-                    "" + senior_courseTxtbox.Text + "', '" +
                     "" + college_school_nameTxtbox.Text + "', '" +
                     "" + college_addressTxtbox.Text + "', '" +
-                    "" + college_degreeTxtbox.Text + "', '" +
+                    "" + college_courseTxtbox.Text + "', '" +
                     "" + college_yr_gradTxtbox.Text + "', '" +
                     "" + college_awardTxtbox.Text + "', '" +
                     "" + othersTxtBox.Text + "', '" +
@@ -251,8 +278,6 @@ namespace LESSON1_1
 
         private void button4_Click(object sender, EventArgs e)
         {
-            try
-            {
                 emp_db_connect.employee_sql = "UPDATE pos_empRegTbl SET emp_fname = '" + fnameTxtbox.Text + "'," +
                 "emp_mname = '" + mnameTxtbox.Text + "'," +
                 "emp_surname = '" + surnameTxtbox.Text + "'," +
@@ -287,16 +312,16 @@ namespace LESSON1_1
                 "senior_high_name = '" + senior_nameTxtbox.Text + "'," +
                 "senior_high_address = '" + senior_addressTxtbox.Text + "'," +
                 "senior_high_yr_grad = '" + senior_yr_gradTxtbox.Text + "'," +
-                "senior_high_award = '" + senior_awardTxtbox.Text + "'," +
-                "track = '" + senior_courseTxtbox.Text + "'," +
+                "senior_high_award = '" + senior_trackTxtbox.Text + "'," +
+                "track = '" + senior_awardTxtbox.Text + "'," +
                 "college_school_name = '" + college_school_nameTxtbox.Text + "'," +
                 "college_address = '" + college_addressTxtbox.Text + "'," +
-                "college_yr_grad = '" + college_degreeTxtbox.Text + "'," +
+                "college_yr_grad = '" + college_courseTxtbox.Text + "'," +
                 "college_award = '" + college_yr_gradTxtbox.Text + "'," +
                 "college_course = '" + college_awardTxtbox.Text + "'," +
                 "others = '" + othersTxtBox.Text + "'," +
                 "position = '" + positionTxtbox.Text + "'," +
-                "work_status = '" + employeeStatusTxtBox.Text + "'," +
+                "emp_work_status = '" + employeeStatusTxtBox.Text + "'," +
                 "emp_date_hired = '" + date_hiredTxtbox.Text + "'," +
                 "emp_department = '" + departmentTxtBox.Text + "'," +
                 "emp_no_of_dependents = '" + emp_num_dependents.Text + "'," +
@@ -310,11 +335,6 @@ namespace LESSON1_1
                 emp_db_connect.employee_sqldatasetSELECT();
                 dataGridView1.DataSource = emp_db_connect.employee_sql_dataset.Tables[0];
                 cleartextboxes();
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Error occurs in this area. Please contact your administrator!(4)");
-            }
         }
 
         private void button5_Click(object sender, EventArgs e)

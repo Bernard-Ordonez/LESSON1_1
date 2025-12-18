@@ -76,8 +76,9 @@ namespace LESSON1_1
 
             noTaxRbtn.Checked = true; // Default 0%
             quantitytextbox.Focus();
-
-            try
+            
+            try { 
+            
             {
                 // code for disabling the textboxes
                 itemnametxtbox.Enabled = false;
@@ -223,16 +224,16 @@ namespace LESSON1_1
                 DateTime datetime = DateTime.Now;
                 time_datelbl.Text = datetime.ToString("MMMM dd, yyyy");
 
-            } // End of the 'try' block
-
-            catch (Exception)
-            {
-                MessageBox.Show("Error occurs in this area. Please contact your administrator!");
             }
-
-
-
         }
+        catch (Exception)
+        {
+                MessageBox.Show("Error occurs in this area. Please contact your administrator for this matter!!!(1)");
+        }
+
+
+
+    }
 
         // --- When picture is clicked ---
         private void SelectFood(string name)
@@ -305,7 +306,7 @@ namespace LESSON1_1
             }
             catch (Exception)
             {
-                MessageBox.Show("Error occurs in this area. Please contact your administrator for this matter!!!");
+                MessageBox.Show("Error occurs in this area. Please contact your administrator for this matter!!!(2)");
             }
 
 

@@ -16,13 +16,18 @@ namespace LESSON1_1
     {
         pos_dbconnection posdb_connect = new pos_dbconnection();
         private string picpath;
+        private bool isloading = true;
         private Image pic;
         public POS_Admin()
         {
             posdb_connect.pos_connString();
             InitializeComponent();
         }
-
+        private void CenterPanel()
+        {
+            panel1.Left = (this.ClientSize.Width - panel1.Width) / 2;
+            panel1.Top = (this.ClientSize.Height - panel1.Height) / 2;
+        }
         private void cleartextboxes()
         {
             try
@@ -78,8 +83,11 @@ namespace LESSON1_1
 
         private void POS_Admin_Load(object sender, EventArgs e)
         {
-          
-                picpathTxtbox1.Hide(); picpathTxtbox2.Hide();
+            CenterPanel();
+            this.Resize += (s, ev) => CenterPanel();
+            isloading = true;
+
+            picpathTxtbox1.Hide(); picpathTxtbox2.Hide();
                 picpathTxtbox3.Hide(); picpathTxtbox4.Hide();
                 picpathTxtbox5.Hide(); picpathTxtbox6.Hide();
                 picpathTxtbox7.Hide(); picpathTxtbox8.Hide();
@@ -100,6 +108,12 @@ namespace LESSON1_1
 
         private void Save_Click(object sender, EventArgs e)
         {
+                    MessageBox.Show(
+                "Data saved successfully (NameTBL).",
+                "Confirmation",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Information
+                );
             try
             {
                 posdb_connect.pos_sql = "INSERT INTO pos_nameTbl (pos_id, name1, name2, name3, name4, name5, name6, name7, name8, name9, name10, name11, name12, name13, name14, name15, name16, name17, name18, name19, name20) VALUES ('" + pos_id_comboBox.Text + "', '"

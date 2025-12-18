@@ -1,0 +1,701 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7C48B5FD-82D9-4B9D-828A-D388F8C2189B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>DSAL01E_MORATA</RootNamespace>
+    <AssemblyName>DSAL01E_MORATA</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="employee_dbconnection.cs" />
+    <Compile Include="Lesson13_Example1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lesson13_Example1.Designer.cs">
+      <DependentUpon>Lesson13_Example1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lesson14_Activity2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lesson14_Activity2.Designer.cs">
+      <DependentUpon>Lesson14_Activity2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lesson14_Activity3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lesson14_Activity3.Designer.cs">
+      <DependentUpon>Lesson14_Activity3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lesson14_Activity3_PrintForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lesson14_Activity3_PrintForm.Designer.cs">
+      <DependentUpon>Lesson14_Activity3_PrintForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lesson14_Activity4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lesson14_Activity4.Designer.cs">
+      <DependentUpon>Lesson14_Activity4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lesson14_Activity5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lesson14_Activity5.Designer.cs">
+      <DependentUpon>Lesson14_Activity5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lesson14_Activity5_PrintForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lesson14_Activity5_PrintForm.Designer.cs">
+      <DependentUpon>Lesson14_Activity5_PrintForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lesson14_Activity10.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lesson14_Activity10.Designer.cs">
+      <DependentUpon>Lesson14_Activity10.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lesson14_Activity8_Cashier2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lesson14_Activity8_Cashier2.Designer.cs">
+      <DependentUpon>Lesson14_Activity8_Cashier2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lesson14_Activity8_Cashier1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lesson14_Activity8_Cashier1.Designer.cs">
+      <DependentUpon>Lesson14_Activity8_Cashier1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lesson14_Activity7.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lesson14_Activity7.Designer.cs">
+      <DependentUpon>Lesson14_Activity7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lesson14_Activity6.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lesson14_Activity6.Designer.cs">
+      <DependentUpon>Lesson14_Activity6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lesson14_Activity9.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lesson14_Activity9.Designer.cs">
+      <DependentUpon>Lesson14_Activity9.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lesson14_Activity11.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lesson14_Activity11.Designer.cs">
+      <DependentUpon>Lesson14_Activity11.cs</DependentUpon>
+    </Compile>
+    <Compile Include="payroll_variables.cs" />
+    <Compile Include="POS_Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="POS_Admin.Designer.cs">
+      <DependentUpon>POS_Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lesson2_Activity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lesson2_Activity.Designer.cs">
+      <DependentUpon>Lesson2_Activity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lesson2_Example2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lesson2_Example2.Designer.cs">
+      <DependentUpon>Lesson2_Example2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lesson2_Example3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lesson2_Example3.Designer.cs">
+      <DependentUpon>Lesson2_Example3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lesson2_Example4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lesson2_Example4.Designer.cs">
+      <DependentUpon>Lesson2_Example4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lesson3_Example2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lesson3_Example2.Designer.cs">
+      <DependentUpon>Lesson3_Example2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lesson3_Example3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lesson3_Example3.Designer.cs">
+      <DependentUpon>Lesson3_Example3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lesson3_Example3_PrintForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lesson3_Example3_PrintForm.Designer.cs">
+      <DependentUpon>Lesson3_Example3_PrintForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lesson3_Example4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lesson3_Example4.Designer.cs">
+      <DependentUpon>Lesson3_Example4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lesson3_Example5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lesson3_Example5.Designer.cs">
+      <DependentUpon>Lesson3_Example5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lesson3_Example5_PrintForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lesson3_Example5_PrintForm.Designer.cs">
+      <DependentUpon>Lesson3_Example5_PrintForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lesson4_Example1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lesson4_Example1.Designer.cs">
+      <DependentUpon>Lesson4_Example1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lesson4_Example2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lesson4_Example2.Designer.cs">
+      <DependentUpon>Lesson4_Example2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="loginDb_dbconnections.cs" />
+    <Compile Include="PayrollClasses.cs" />
+    <Compile Include="Payroll_classForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payroll_classForm.Designer.cs">
+      <DependentUpon>Payroll_classForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Payroll_classForm_SaveForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payroll_classForm_SaveForm.Designer.cs">
+      <DependentUpon>Payroll_classForm_SaveForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="payroll_dbconnection.cs" />
+    <Compile Include="POS2_classForm_PrintForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="POS2_classForm_PrintForm.Designer.cs">
+      <DependentUpon>POS2_classForm_PrintForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="POS2_classForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="POS2_classForm.Designer.cs">
+      <DependentUpon>POS2_classForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lesson4_Example3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lesson4_Example3.Designer.cs">
+      <DependentUpon>Lesson4_Example3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lesson4_Example3_PrintForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lesson4_Example3_PrintForm.Designer.cs">
+      <DependentUpon>Lesson4_Example3_PrintForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Payroll_functionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payroll_functionForm.Designer.cs">
+      <DependentUpon>Payroll_functionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Payroll_functionForm_SaveForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payroll_functionForm_SaveForm.Designer.cs">
+      <DependentUpon>Payroll_functionForm_SaveForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="POS1_classForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="POS1_classForm.Designer.cs">
+      <DependentUpon>POS1_classForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pos_dbconnection.cs" />
+    <Compile Include="Price_Item_Value.cs" />
+    <Compile Include="SratchForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SratchForm.Designer.cs">
+      <DependentUpon>SratchForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="useraccount_db_connection.cs" />
+    <Compile Include="Variables.cs" />
+    <Compile Include="POS1_functionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="POS1_functionForm.Designer.cs">
+      <DependentUpon>POS1_functionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="POS2_functionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="POS2_functionForm.Designer.cs">
+      <DependentUpon>POS2_functionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="POS2_functionForm_PrintForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="POS2_functionForm_PrintForm.Designer.cs">
+      <DependentUpon>POS2_functionForm_PrintForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Prelim_Exam2_Lesson5Activity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prelim_Exam2_Lesson5Activity.Designer.cs">
+      <DependentUpon>Prelim_Exam2_Lesson5Activity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Prelim_Exam2_Lesson5Actvity_SaveForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prelim_Exam2_Lesson5Actvity_SaveForm.Designer.cs">
+      <DependentUpon>Prelim_Exam2_Lesson5Actvity_SaveForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lesson5_Example1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lesson5_Example1.Designer.cs">
+      <DependentUpon>Lesson5_Example1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lesson5_Example2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lesson5_Example2.Designer.cs">
+      <DependentUpon>Lesson5_Example2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lesson5_Example3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lesson5_Example3.Designer.cs">
+      <DependentUpon>Lesson5_Example3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lesson5_Example4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lesson5_Example4.Designer.cs">
+      <DependentUpon>Lesson5_Example4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lesson5_Example5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lesson5_Example5.Designer.cs">
+      <DependentUpon>Lesson5_Example5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lesson5_Example6.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lesson5_Example6.Designer.cs">
+      <DependentUpon>Lesson5_Example6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lesson5_Example7.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lesson5_Example7.Designer.cs">
+      <DependentUpon>Lesson5_Example7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lesson5_Example7_PrintForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lesson5_Example7_PrintForm.Designer.cs">
+      <DependentUpon>Lesson5_Example7_PrintForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lesson6_MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lesson6_MainForm.Designer.cs">
+      <DependentUpon>Lesson6_MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Prelim_Quiz1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prelim_Quiz1.Designer.cs">
+      <DependentUpon>Prelim_Quiz1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Lesson13_Example1.resx">
+      <DependentUpon>Lesson13_Example1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lesson14_Activity2.resx">
+      <DependentUpon>Lesson14_Activity2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lesson14_Activity3.resx">
+      <DependentUpon>Lesson14_Activity3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lesson14_Activity3_PrintForm.resx">
+      <DependentUpon>Lesson14_Activity3_PrintForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lesson14_Activity4.resx">
+      <DependentUpon>Lesson14_Activity4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lesson14_Activity5.resx">
+      <DependentUpon>Lesson14_Activity5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lesson14_Activity5_PrintForm.resx">
+      <DependentUpon>Lesson14_Activity5_PrintForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lesson14_Activity10.resx">
+      <DependentUpon>Lesson14_Activity10.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lesson14_Activity8_Cashier2.resx">
+      <DependentUpon>Lesson14_Activity8_Cashier2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lesson14_Activity8_Cashier1.resx">
+      <DependentUpon>Lesson14_Activity8_Cashier1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lesson14_Activity7.resx">
+      <DependentUpon>Lesson14_Activity7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lesson14_Activity6.resx">
+      <DependentUpon>Lesson14_Activity6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lesson14_Activity9.resx">
+      <DependentUpon>Lesson14_Activity9.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lesson14_Activity11.resx">
+      <DependentUpon>Lesson14_Activity11.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="POS_Admin.resx">
+      <DependentUpon>POS_Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lesson2_Activity.resx">
+      <DependentUpon>Lesson2_Activity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lesson2_Example2.resx">
+      <DependentUpon>Lesson2_Example2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lesson2_Example3.resx">
+      <DependentUpon>Lesson2_Example3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lesson2_Example4.resx">
+      <DependentUpon>Lesson2_Example4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lesson3_Example2.resx">
+      <DependentUpon>Lesson3_Example2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lesson3_Example3.resx">
+      <DependentUpon>Lesson3_Example3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lesson3_Example3_PrintForm.resx">
+      <DependentUpon>Lesson3_Example3_PrintForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lesson3_Example4.resx">
+      <DependentUpon>Lesson3_Example4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lesson3_Example5.resx">
+      <DependentUpon>Lesson3_Example5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lesson3_Example5_PrintForm.resx">
+      <DependentUpon>Lesson3_Example5_PrintForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lesson4_Example1.resx">
+      <DependentUpon>Lesson4_Example1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lesson4_Example2.resx">
+      <DependentUpon>Lesson4_Example2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payroll_classForm.resx">
+      <DependentUpon>Payroll_classForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payroll_classForm_SaveForm.resx">
+      <DependentUpon>Payroll_classForm_SaveForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="POS2_classForm_PrintForm.resx">
+      <DependentUpon>POS2_classForm_PrintForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="POS2_classForm.resx">
+      <DependentUpon>POS2_classForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lesson4_Example3.resx">
+      <DependentUpon>Lesson4_Example3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lesson4_Example3_PrintForm.resx">
+      <DependentUpon>Lesson4_Example3_PrintForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payroll_functionForm.resx">
+      <DependentUpon>Payroll_functionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payroll_functionForm_SaveForm.resx">
+      <DependentUpon>Payroll_functionForm_SaveForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="POS1_classForm.resx">
+      <DependentUpon>POS1_classForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="POS1_functionForm.resx">
+      <DependentUpon>POS1_functionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="POS2_functionForm.resx">
+      <DependentUpon>POS2_functionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="POS2_functionForm_PrintForm.resx">
+      <DependentUpon>POS2_functionForm_PrintForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prelim_Exam2_Lesson5Activity.resx">
+      <DependentUpon>Prelim_Exam2_Lesson5Activity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prelim_Exam2_Lesson5Actvity_SaveForm.resx">
+      <DependentUpon>Prelim_Exam2_Lesson5Actvity_SaveForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lesson5_Example1.resx">
+      <DependentUpon>Lesson5_Example1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lesson5_Example2.resx">
+      <DependentUpon>Lesson5_Example2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lesson5_Example3.resx">
+      <DependentUpon>Lesson5_Example3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lesson5_Example4.resx">
+      <DependentUpon>Lesson5_Example4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lesson5_Example5.resx">
+      <DependentUpon>Lesson5_Example5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lesson5_Example6.resx">
+      <DependentUpon>Lesson5_Example6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lesson5_Example7.resx">
+      <DependentUpon>Lesson5_Example7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lesson5_Example7_PrintForm.resx">
+      <DependentUpon>Lesson5_Example7_PrintForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lesson6_MainForm.resx">
+      <DependentUpon>Lesson6_MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prelim_Quiz1.resx">
+      <DependentUpon>Prelim_Quiz1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SratchForm.resx">
+      <DependentUpon>SratchForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include=".editorconfig" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\amanosPizza.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Beef-Tapa.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BreakfastMeal A.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BreakfastMealB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Burger&amp;Chicken.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cauliflowerCrustPizza.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChickenMeal2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChickenMealA.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\default_image.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dominosPizza.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DoublePalabocMeal.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DoubleValueMealA.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FamilyComboMealA.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FamilyComboMealB.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FamilyComboMealC.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FamilyComboMealD.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FamilyMealC.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FriendMealA.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hawaiianPizza.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\JollyShake.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\JollySpag.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KFCBurgerCombo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KFCChowFun.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KFCComboMeal.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LunchValueMeal1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LunchValueMealB.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\newYorkStylePizza.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PancakeValueMealA.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PastaMeal101.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pepperoniPizza.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pizza1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pizza2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pizza3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pizza4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pizza5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pizza6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pizza7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pizza8.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pizza9.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pizzaBBQ.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pizzaSpecialA.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pizzaSpecialB.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pizzaSpecialC.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pizzaSpecialD.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TwinFries.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GUI_BG.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LAB_login.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="POS_SQLCodes.txt" />
+    <None Include="Resources\MagnifyingGlass.png" />
+    <None Include="Resources\BG2.jpg" />
+    <Content Include="Resources\JuanDelaCruz.jpg" />
+    <None Include="Resources\WhitePatternBG.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
